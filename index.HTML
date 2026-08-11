@@ -1300,6 +1300,12 @@ let finderFeedback = {};
 let activeFilter = 'all';
 let activeClusters = new Set(['data','business','product','marketing']);
 let isSearching = false;
+// The old LinkedIn-search-agent feature (Find New Jobs / Finder tab) has been
+// removed from the UI — the Job Fit Analyzer replaced it. This stub exists only
+// so leftover calls (initApp, importBackup) don't throw; it's a safe no-op.
+function renderFinderJobs() {
+  if (!document.getElementById('results-area')) return;
+}
 function saveSettings() {
   localStorage.setItem(LS_SETTINGS, JSON.stringify({
     apiKey:    document.getElementById('api-key').value,
