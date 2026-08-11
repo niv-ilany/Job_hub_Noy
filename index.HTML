@@ -398,18 +398,18 @@ pre { white-space: pre-wrap; word-break: break-all; }
       <div class="settings-grid">
         <div class="field">
           <label>🔑 Anthropic API Key</label>
-          <input type="password" class="s-input" id="api-key" placeholder="sk-ant-..." oninput="updateStatus()" />
+          <input type="password" class="s-input" id="api-key" placeholder="sk-ant-..." oninput="updateStatus(); saveSettings()" />
           <div class="field-hint">Get yours at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> → API Keys</div>
         </div>
         <div class="field">
           <label>✈️ Telegram Bot Token</label>
-          <input type="password" class="s-input" id="tg-token" placeholder="1234567890:AAFx..." oninput="updateStatus()" />
+          <input type="password" class="s-input" id="tg-token" placeholder="1234567890:AAFx..." oninput="updateStatus(); saveSettings()" />
           <div class="field-hint">Message <a href="https://t.me/BotFather" target="_blank">@BotFather</a> → /newbot → copy token</div>
         </div>
         <div class="field">
           <label>💬 Telegram Chat ID</label>
           <div style="display:flex;gap:7px;">
-            <input type="text" class="s-input" id="tg-chat-id" placeholder="e.g. 123456789" oninput="updateStatus()" style="flex:1" />
+            <input type="text" class="s-input" id="tg-chat-id" placeholder="e.g. 123456789" oninput="updateStatus(); saveSettings()" style="flex:1" />
             <button class="inline-btn" onclick="detectChatId()">🔍 Detect</button>
           </div>
           <div class="field-hint">Start your bot first, then click Detect</div>
@@ -419,15 +419,15 @@ pre { white-space: pre-wrap; word-break: break-all; }
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
             <div>
               <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Personal Access Token</div>
-              <input type="password" class="s-input" id="gh-token" placeholder="ghp_..." oninput="updateStatus()" />
+              <input type="password" class="s-input" id="gh-token" placeholder="ghp_..." oninput="updateStatus(); saveSettings()" />
             </div>
             <div>
               <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">GitHub Username</div>
-              <input type="text" class="s-input" id="gh-user" placeholder="your-username" oninput="updateStatus()" />
+              <input type="text" class="s-input" id="gh-user" placeholder="your-username" oninput="updateStatus(); saveSettings()" />
             </div>
             <div>
               <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">Repository Name</div>
-              <input type="text" class="s-input" id="gh-repo" placeholder="job-hub" oninput="updateStatus()" />
+              <input type="text" class="s-input" id="gh-repo" placeholder="job-hub" oninput="updateStatus(); saveSettings()" />
             </div>
           </div>
           <div class="field-hint" style="margin-top:6px;display:flex;align-items:center;gap:10px;">
