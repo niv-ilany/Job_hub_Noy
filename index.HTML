@@ -6,7 +6,6 @@
 <title>Noy — Job Hub</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-
 :root {
   --bg: #f5f4f0;
   --surface: #ffffff;
@@ -25,9 +24,7 @@
   --shadow-md: 0 4px 24px rgba(0,0,0,0.09);
   --radius: 10px;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -36,8 +33,6 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
-
-/* ─── GLOBAL NAV ─────────────────────────────────────── */
 .global-nav {
   background: var(--text);
   padding: 0 36px;
@@ -86,17 +81,9 @@ body {
   border-radius: 12px;
 }
 .nav-stat strong { color: rgba(255,255,255,0.8); }
-
-/* ─── TAB CONTENT ────────────────────────────────────── */
 .tab-page { display: none; }
 .tab-page.active { display: block; }
-
-/* ═══════════════════════════════════════════════════════
-   TAB 1: JOB FINDER  (original styling preserved)
-   ═══════════════════════════════════════════════════════ */
-
 .finder-wrap { max-width: 1060px; margin: 0 auto; padding: 28px 36px; }
-
 .settings-panel {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 14px; margin-bottom: 20px;
@@ -126,7 +113,6 @@ body {
 .divider { height: 1px; background: var(--border-light); margin: 16px 0; }
 .inline-btn { height: 36px; padding: 0 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); font-size: 12px; cursor: pointer; white-space: nowrap; font-family: 'Inter', sans-serif; color: var(--text-muted); transition: all 0.15s; }
 .inline-btn:hover { border-color: var(--accent); color: var(--accent); }
-
 .profile-section { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; margin-bottom: 20px; box-shadow: var(--shadow); }
 .profile-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .profile-header h2 { font-family: 'Lora', serif; font-size: 16px; font-style: italic; }
@@ -143,7 +129,6 @@ body {
 .cluster-btn.marketing.active { background: #fef8ed; }
 .profile-meta { font-size: 12px; color: var(--text-dim); line-height: 1.9; margin-top: 12px; border-top: 1px solid var(--border-light); padding-top: 12px; }
 .profile-meta strong { color: var(--text-muted); }
-
 .controls { display: flex; gap: 10px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; }
 .search-btn { display: flex; align-items: center; gap: 8px; background: var(--accent); color: white; border: none; border-radius: 9px; padding: 11px 22px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
 .search-btn:hover { background: var(--accent-hover); box-shadow: 0 4px 16px rgba(79,110,247,0.25); transform: translateY(-1px); }
@@ -153,11 +138,9 @@ body {
 .filter-btn { padding: 7px 13px; border-radius: 7px; border: none; background: transparent; color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.15s; font-weight: 500; }
 .filter-btn.active { background: var(--accent); color: white; }
 .filter-btn:hover:not(.active) { background: var(--surface2); color: var(--text); }
-
 .results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .results-title { font-family: 'Lora', serif; font-size: 20px; }
 .results-count-f { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); }
-
 .jobs-grid { display: flex; flex-direction: column; gap: 11px; }
 .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 18px 20px; transition: all 0.2s; position: relative; overflow: hidden; box-shadow: var(--shadow); animation: slideIn 0.25s ease forwards; opacity: 0; transform: translateY(8px); }
 @keyframes slideIn { to { opacity: 1; transform: translateY(0); } }
@@ -185,17 +168,14 @@ body {
 .act-btn.like:hover, .act-btn.like.active { border-color: var(--accent3); background: #edfaf4; color: var(--accent3); }
 .act-btn.dismiss:hover, .act-btn.dismiss.active { border-color: var(--accent2); background: #fef0f2; color: var(--accent2); }
 .act-btn.ext:hover { border-color: var(--accent); background: #eef1ff; color: var(--accent); }
-
 .loading-state { text-align: center; padding: 60px 20px; }
 .spinner { width: 34px; height: 34px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 14px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loading-text { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim); margin-top: 6px; }
-
 .empty-state-f { text-align: center; padding: 70px 20px; }
 .empty-icon { font-size: 40px; margin-bottom: 12px; }
 .empty-state-f h3 { font-family: 'Lora', serif; font-size: 18px; color: var(--text-muted); margin-bottom: 7px; }
 .empty-state-f p { font-size: 13px; color: var(--text-dim); }
-
 .agent-log { background: #1a1a2a; border-radius: 10px; padding: 14px 18px; margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9090b0; max-height: 150px; overflow-y: auto; display: none; }
 .agent-log.visible { display: block; }
 .log-line { padding: 2px 0; line-height: 1.6; }
@@ -203,13 +183,7 @@ body {
 .log-line.success .msg { color: #43d9ad; }
 .log-line.info .msg { color: #6080ff; }
 .log-line.warn .msg { color: #ffd166; }
-
-/* ═══════════════════════════════════════════════════════
-   TAB 2: TRACKER
-   ═══════════════════════════════════════════════════════ */
-
 .tracker-wrap { height: calc(100vh - 55px); display: flex; flex-direction: column; }
-
 .tracker-toolbar {
   padding: 12px 28px;
   background: var(--surface);
@@ -225,7 +199,6 @@ body {
 .t-btn-primary:hover { background: var(--accent-hover); }
 .t-btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--text-muted); }
 .t-btn-ghost:hover { background: var(--bg); color: var(--text); }
-
 .tracker-tabs-bar {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -236,12 +209,10 @@ body {
 .t-tab { padding: 9px 16px; font-family: inherit; font-size: 12px; background: transparent; border: none; border-bottom: 2px solid transparent; cursor: pointer; color: var(--text-muted); transition: all .15s; font-weight: 500; }
 .t-tab.active { border-bottom-color: var(--accent); color: var(--accent); }
 .t-tab:hover:not(.active) { color: var(--text); }
-
 .tracker-table-area {
   flex: 1; overflow: auto; padding: 16px 28px;
 }
 .t-count { font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; margin-bottom: 10px; }
-
 table.t-table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 table.t-table thead { background: var(--surface2); }
 table.t-table th { padding: 9px 11px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-muted); font-weight: 500; border-bottom: 1px solid var(--border); white-space: nowrap; cursor: pointer; user-select: none; }
@@ -249,7 +220,6 @@ table.t-table th:hover { color: var(--text); }
 table.t-table td { padding: 8px 11px; border-bottom: 1px solid #f2efe9; vertical-align: top; font-size: 12px; }
 table.t-table tr:last-child td { border-bottom: none; }
 table.t-table tr:hover td { background: #fdfcfa; }
-
 .t-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; white-space: nowrap; }
 .t-badge-interviewed { background: #fff3e0; color: #c8773a; }
 .t-badge-applied { background: #e8f4e6; color: #2d5a27; }
@@ -257,30 +227,21 @@ table.t-table tr:hover td { background: #fdfcfa; }
 .t-badge-upcoming { background: #eef0ff; color: #3a4dd6; border: 1px solid #c2c9ff; }
 tr.t-row-upcoming td { background: #f8f9ff; }
 tr.t-row-upcoming:hover td { background: #f1f3ff; }
-
 .t-icon-btn { background: none; border: 1px solid var(--border); border-radius: 5px; cursor: pointer; padding: 3px 7px; font-size: 11px; transition: all .15s; color: var(--text-muted); }
 .t-icon-btn:hover { background: var(--bg); color: var(--text); }
 .t-icon-btn.del:hover { background: #fdecea; border-color: #a63228; color: #a63228; }
-
 .t-empty { text-align: center; padding: 50px 20px; color: var(--text-dim); }
 .t-notes { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; color: var(--text-muted); cursor: help; }
 .t-company { font-weight: 500; }
 .t-title-sm { font-size: 11px; color: var(--text-muted); margin-top: 1px; max-width: 160px; }
 .t-url-link { color: var(--accent); text-decoration: none; font-size: 10px; }
 .t-url-link:hover { text-decoration: underline; }
-
-/* ═══════════════════════════════════════════════════════
-   TAB 3: ANALYSIS
-   ═══════════════════════════════════════════════════════ */
-
 .analysis-wrap { max-width: 1100px; margin: 0 auto; padding: 28px 36px; }
 .analysis-wrap h2 { font-family: 'Lora', serif; font-size: 22px; font-weight: 600; margin-bottom: 6px; }
 .analysis-wrap .subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
-
 .a-grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 24px; }
 .a-grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
 .a-grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 24px; }
-
 .kpi-card {
   background: var(--surface);
   border-radius: var(--radius);
@@ -296,11 +257,8 @@ tr.t-row-upcoming:hover td { background: #f1f3ff; }
 .kpi-num { font-family: 'Lora', serif; font-size: 34px; font-weight: 900; line-height: 1; color: var(--text); }
 .kpi-label { font-size: 11px; color: var(--text-muted); margin-top: 5px; text-transform: uppercase; letter-spacing: .06em; font-weight: 500; }
 .kpi-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
-
 .analysis-section { background: var(--surface); border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow); margin-bottom: 20px; }
 .a-section-title { font-family: 'Lora', serif; font-size: 16px; font-weight: 600; margin-bottom: 14px; color: var(--text); }
-
-/* Bar chart */
 .bar-chart { display: flex; flex-direction: column; gap: 8px; }
 .bar-row { display: flex; align-items: center; gap: 10px; }
 .bar-label { min-width: 120px; font-size: 12px; color: var(--text-muted); text-align: right; }
@@ -308,8 +266,6 @@ tr.t-row-upcoming:hover td { background: #f1f3ff; }
 .bar-fill { height: 100%; border-radius: 4px; transition: width .6s ease; display: flex; align-items: center; padding-left: 8px; }
 .bar-val { font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: #fff; }
 .bar-total { font-size: 11px; color: var(--text-dim); min-width: 30px; text-align: right; }
-
-/* Funnel */
 .funnel { display: flex; flex-direction: column; gap: 6px; align-items: center; }
 .funnel-step { width: 100%; background: var(--surface2); border-radius: 6px; position: relative; overflow: hidden; height: 40px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
 .funnel-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; }
@@ -317,8 +273,6 @@ tr.t-row-upcoming:hover td { background: #f1f3ff; }
 .funnel-num { position: relative; z-index: 1; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; }
 .funnel-pct { position: relative; z-index: 1; font-size: 11px; color: var(--text-muted); }
 .funnel-arrow { text-align: center; font-size: 14px; color: var(--text-dim); }
-
-/* Insight cards */
 .insights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .insight-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
 .insight-icon { font-size: 20px; margin-bottom: 6px; }
@@ -326,25 +280,17 @@ tr.t-row-upcoming:hover td { background: #f1f3ff; }
 .insight-body { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
 .insight-body strong { color: var(--accent3); }
 .insight-body.warn strong { color: var(--accent2); }
-
-/* Mini table */
 .mini-table { width: 100%; border-collapse: collapse; font-size: 12px; }
 .mini-table th { padding: 6px 10px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-dim); font-weight: 500; border-bottom: 1px solid var(--border); }
 .mini-table td { padding: 7px 10px; border-bottom: 1px solid #f0ede8; }
 .mini-table tr:last-child td { border-bottom: none; }
-
-/* Company tags */
 .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
 .company-tag { padding: 4px 12px; border-radius: 14px; font-size: 11px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); }
 .company-tag.high { background: #edfaf4; border-color: #a8dfc7; color: #2d6b4a; }
 .company-tag.med { background: #eef1ff; border-color: #c0caff; color: #3a50cc; }
-
-/* Pill stat */
 .stat-pill-f { background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 5px 13px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
 .stat-pill-f .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent3); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-/* ─── MODAL ─────────────────────────────────────────── */
 .modal-overlay { position: fixed; inset: 0; background: rgba(26,26,46,.4); backdrop-filter: blur(2px); z-index: 300; display: flex; align-items: center; justify-content: center; padding: 20px; }
 .modal-overlay.hidden { display: none; }
 .modal { background: var(--surface); border-radius: 14px; width: 100%; max-width: 620px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.18); padding: 26px; }
@@ -360,44 +306,27 @@ tr.t-row-upcoming:hover td { background: #f1f3ff; }
 .checkbox-item { display: flex; align-items: center; gap: 5px; font-size: 11px; cursor: pointer; }
 .checkbox-item input { cursor: pointer; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
-
-/* Detail modal */
 .detail-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid #f0ede8; }
 .detail-row:last-child { border-bottom: none; }
 .detail-key { font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-dim); min-width: 130px; flex-shrink: 0; padding-top: 2px; }
 .detail-val { font-size: 12px; color: var(--text); line-height: 1.55; }
-
-/* ─── TOAST ─────────────────────────────────────────── */
 .toast { position: fixed; bottom: 24px; right: 24px; background: #1a1a2a; color: #e0e0f0; border-radius: 10px; padding: 11px 18px; font-size: 13px; font-weight: 500; box-shadow: 0 8px 32px rgba(0,0,0,.18); z-index: 999; opacity: 0; transform: translateY(10px); transition: all 0.25s; pointer-events: none; display: flex; align-items: center; gap: 8px; }
 .toast.show { opacity: 1; transform: translateY(0); }
-
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 details summary { list-style: none; cursor: pointer; }
 details summary::-webkit-details-marker { display: none; }
 pre { white-space: pre-wrap; word-break: break-all; }
-
-/* ═══════════════════════════════════════════════════════
-   MOBILE / IPHONE RESPONSIVE
-   ═══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-
-  /* Nav */
   .nav { padding: 0 12px; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .nav-tab { font-size: 11px; padding: 0 10px; white-space: nowrap; flex-shrink: 0; }
   .nav-stats { display: none; }
-
-  /* Pages */
   .finder-wrap { padding: 14px 12px; }
   .analysis-wrap { padding: 14px 12px; }
-
-  /* Settings grid */
   .settings-grid { grid-template-columns: 1fr !important; }
   .settings-grid .field[style*="grid-column"] { grid-column: 1 !important; }
   .settings-grid .field > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-
-  /* Analyzer — stack vertically */
   #tab-finder .finder-wrap > div[style*="grid-template-columns:1fr 1fr"] {
     display: flex !important;
     flex-direction: column !important;
@@ -405,24 +334,16 @@ pre { white-space: pre-wrap; word-break: break-all; }
   }
   #analysis-result { height: 280px !important; }
   #jd-input { height: 200px !important; }
-
-  /* Tracker toolbar */
   .tracker-toolbar { flex-wrap: wrap; gap: 6px; padding: 8px 10px; }
   .t-search { min-width: 0 !important; max-width: 100% !important; flex: 1 1 120px; }
   .t-select { font-size: 11px; padding: 5px 6px; }
   .t-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding: 0 10px; }
   .t-tab { font-size: 11px; padding: 6px 10px; white-space: nowrap; flex-shrink: 0; }
-
-  /* Table — horizontal scroll */
   .tracker-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .tracker-table { min-width: 600px; }
   .t-notes { max-width: 100px !important; }
-
-  /* Hide less important columns on mobile */
   .tracker-table th:nth-child(n+8),
   .tracker-table td:nth-child(n+8) { display: none; }
-
-  /* Modal — full screen on mobile */
   .modal-overlay { align-items: flex-end; padding: 0; }
   .modal {
     max-width: 100% !important;
@@ -435,24 +356,15 @@ pre { white-space: pre-wrap; word-break: break-all; }
   .form-group.full { grid-column: 1 !important; }
   .checkbox-row { gap: 8px; }
   .checkbox-item { font-size: 12px; }
-
-  /* Analysis tab */
   .analysis-wrap .kpi-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
   .analysis-wrap .insight-grid { grid-template-columns: 1fr !important; }
   .bar-label { min-width: 80px !important; font-size: 11px !important; }
-
-  /* Buttons */
   .search-btn { width: 100%; margin-top: 8px; }
   .modal-actions { flex-wrap: wrap; gap: 8px; }
   .modal-actions .t-btn { flex: 1; min-width: 100px; text-align: center; }
-
-  /* QR code */
   #qr-container img { width: 180px !important; height: 180px !important; border-radius: 8px; }
-
-  /* Toast */
   .toast { bottom: 80px; left: 12px; right: 12px; width: auto; }
 }
-
 @media (max-width: 400px) {
   .nav-tab { font-size: 10px; padding: 0 7px; }
   .kpi-grid { grid-template-columns: 1fr 1fr !important; }
@@ -460,8 +372,6 @@ pre { white-space: pre-wrap; word-break: break-all; }
 </style>
 </head>
 <body>
-
-<!-- ─── GLOBAL NAV ─────────────────────────────── -->
 <nav class="global-nav">
   <div class="nav-logo">Noy's <em>Job Hub</em></div>
   <button class="nav-tab active" onclick="showTab('finder',this)">🎯 Job Analyzer</button>
@@ -473,14 +383,8 @@ pre { white-space: pre-wrap; word-break: break-all; }
     <span id="gh-sync-badge" style="font-size:11px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:5px;background:rgba(255,255,255,0.07);display:none;"></span>
   </div>
 </nav>
-
-<!-- ══════════════════════════════════════════════════
-     TAB 1: FINDER
-     ══════════════════════════════════════════════════ -->
 <div class="tab-page active" id="tab-finder">
 <div class="finder-wrap">
-
-  <!-- Settings Panel (kept for API key + integrations) -->
   <div class="settings-panel">
     <button class="settings-toggle" onclick="toggleSettings()">
       <div class="settings-left">
@@ -555,8 +459,6 @@ pre { white-space: pre-wrap; word-break: break-all; }
       </div>
     </div>
   </div>
-
-  <!-- ── JOB ANALYZER ── -->
   <div style="margin-top:28px;">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;">
       <div>
@@ -565,22 +467,18 @@ pre { white-space: pre-wrap; word-break: break-all; }
       </div>
       <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);padding-top:4px;">~$0.01 per analysis</div>
     </div>
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-      <!-- Input -->
       <div>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
           <label style="font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">Job Description</label>
           <button class="inline-btn" onclick="clearAnalyzer()" style="font-size:11px;height:24px;">✕ Clear</button>
         </div>
-        <!-- URL fetch row -->
         <div style="display:flex;gap:7px;margin-bottom:8px;">
           <input type="url" id="jd-url" placeholder="Paste job URL to auto-fetch (LinkedIn, Drushim, etc.)" style="flex:1;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'Inter',sans-serif;color:var(--text);transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'" onkeydown="if(event.key==='Enter')fetchJdFromUrl()" />
           <button class="inline-btn" onclick="fetchJdFromUrl()" id="fetch-url-btn" style="height:36px;padding:0 14px;font-size:12px;white-space:nowrap;">🔗 Fetch</button>
         </div>
         <div id="fetch-status" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-muted);margin-bottom:6px;min-height:14px;"></div>
         <textarea id="jd-input" placeholder="...or paste the job description directly here.
-
 Include: title, company, responsibilities, requirements.
 The more text the better." style="width:100%;height:280px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:13px;font-family:'Inter',sans-serif;color:var(--text);resize:vertical;line-height:1.6;transition:border-color 0.2s;" oninput="onJdInput()" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;">
@@ -590,8 +488,6 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
           </button>
         </div>
       </div>
-
-      <!-- Result -->
       <div>
         <div style="margin-bottom:6px;">
           <label style="font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">Analysis</label>
@@ -609,20 +505,12 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
         </div>
       </div>
     </div>
-
-    <!-- Agent log -->
     <div class="agent-log" id="agent-log" style="margin-top:16px;"></div>
   </div>
-
-</div><!-- /finder-wrap -->
-</div><!-- /tab-finder -->
-
-<!-- ══════════════════════════════════════════════════
-     TAB 2: TRACKER
-     ══════════════════════════════════════════════════ -->
+</div>
+</div>
 <div class="tab-page" id="tab-tracker">
 <div class="tracker-wrap">
-
   <div class="tracker-toolbar">
     <input class="t-search" type="text" id="t-search" placeholder="Search company, title, notes…">
     <select class="t-select" id="t-filter-status">
@@ -648,7 +536,6 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
       <button class="t-btn" onclick="openAiApplyImport()" style="background:#f0f4ff;border:1.5px solid #c0caff;color:#3a57e8;font-weight:600;">📥 AIApply</button>
     </div>
   </div>
-
   <div class="tracker-tabs-bar">
     <button class="t-tab active" onclick="setTrackerTab('open',this)">🟢 Open</button>
     <button class="t-tab" onclick="setTrackerTab('upcoming',this)">📅 Upcoming Interviews</button>
@@ -659,7 +546,6 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
     <button class="t-tab" onclick="setTrackerTab('pending',this)">– Pending</button>
     <button class="t-tab" onclick="setTrackerTab('all',this)">All</button>
   </div>
-
   <div class="tracker-table-area">
     <div class="t-count" id="t-count"></div>
     <table class="t-table" id="t-table">
@@ -685,20 +571,14 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
     <div id="t-empty" class="t-empty" style="display:none;">No jobs match your filters</div>
   </div>
 </div>
-</div><!-- /tab-tracker -->
-
-<!-- ══════════════════════════════════════════════════
-     TAB 3: ANALYSIS
-     ══════════════════════════════════════════════════ -->
+</div>
 <div class="tab-page" id="tab-analysis">
 <div class="analysis-wrap">
   <h2>Search Analysis</h2>
   <p class="subtitle">Patterns, performance and insights from your job search history</p>
-  <div id="analysis-content"><!-- rendered by JS --></div>
+  <div id="analysis-content"></div>
 </div>
-</div><!-- /tab-analysis -->
-
-<!-- ─── MODALS ────────────────────────────────────── -->
+</div>
 <div class="modal-overlay hidden" id="modal-overlay" onclick="if(event.target===this)closeModal()">
   <div class="modal">
     <div class="modal-title" id="modal-title">Add Job</div>
@@ -771,7 +651,6 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
     </div>
   </div>
 </div>
-
 <div class="modal-overlay hidden" id="detail-overlay" onclick="if(event.target===this)closeDetail()">
   <div class="modal">
     <div class="modal-title" id="detail-title"></div>
@@ -779,9 +658,7 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
     <div class="modal-actions"><button class="t-btn t-btn-ghost" onclick="closeDetail()">Close</button></div>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <script>
 // ─────────────────────────────────────────────────────────────
 //  DATA ARCHITECTURE
@@ -789,29 +666,23 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
 //  localStorage = your live edits, always wins over data.json on load
 //  index.html = app only, I (Claude) update this freely without touching data.json
 // ─────────────────────────────────────────────────────────────
-// Try GitHub raw URL first (works on any domain incl Vercel), fall back to relative
+// ⚠️ TODO: confirm the real GitHub username + repo name, then fix this line.
+// It currently points at a repo that almost certainly doesn't exist, which
+// means data.json silently fails to load on every visit and the app falls
+// back to localStorage only.
 const DATA_URL = 'https://raw.githubusercontent.com/Noy-ilany/Job_hub/main/data.json';
 const LS_JOBS     = 'Noy_jobs_v4';
 const LS_FINDER   = 'Noy_finder_v1';
 const LS_SETTINGS = 'Noy_settings';
-
 function saveJobs() { try { localStorage.setItem(LS_JOBS, JSON.stringify(jobs)); } catch(e){} }
 function saveFinderState() {
   try { localStorage.setItem(LS_FINDER, JSON.stringify({ finderJobs, finderFeedback })); } catch(e){}
 }
-
-// ─────────────────────────────────────────────────────────────
-//  TRACKER STATE
-// ─────────────────────────────────────────────────────────────
 let jobs = [];
 let tTab = 'open';
 let tSortCol = 'month';
 let tSortDir = -1;
 let editId = null;
-
-// ─────────────────────────────────────────────────────────────
-//  GLOBAL NAV
-// ─────────────────────────────────────────────────────────────
 function showTab(name, btn) {
   document.querySelectorAll('.tab-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
@@ -829,10 +700,6 @@ function updateNavStats() {
   if (nsLiked) nsLiked.textContent = Object.values(finderFeedback).filter(v=>v==='liked').length;
   if (finderCount) finderCount.textContent = jobs.length + ' positions analyzed';
 }
-
-// ─────────────────────────────────────────────────────────────
-//  TOAST
-// ─────────────────────────────────────────────────────────────
 let toastTimer;
 function showToast(msg, emoji='✓') {
   const t = document.getElementById('toast');
@@ -841,25 +708,16 @@ function showToast(msg, emoji='✓') {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
 }
-
-// ─────────────────────────────────────────────────────────────
-//  TRACKER HELPERS
-// ─────────────────────────────────────────────────────────────
 function getStatus(j) {
   if (j.interviewed) return 'interviewed';
   if (j.applied === false || j.choseNotToApply) return 'notapplied';
   if (j.applied) return 'applied';
   return 'notapplied';
 }
-
-// A process is CLOSED if: chose not to apply, sent thank-you (post-rejection),
-// or status text contains rejection signals
 const REJECTION_KEYWORDS = /reject|declined|not moving|no longer|passed|unfortunately|not selected|closed|filled|withdrawn|not a fit|המשרה נסגרה/i;
 function isClosed(j) {
-  // Manual override takes priority
   if (j.processOverride && j.processOverride.startsWith('closed')) return true;
   if (j.processOverride === 'open' || j.processOverride === 'pending') return false;
-  // Auto-detect
   if (j.choseNotToApply) return true;
   if (j.thankYouEmail) return true;
   if (j.status && REJECTION_KEYWORDS.test(j.status)) return true;
@@ -873,7 +731,6 @@ function isOpen(j) {
   if (!j.applied) return false;
   return !isClosed(j);
 }
-
 function processStatus(j) {
   if (j.processOverride === 'open') return 'open';
   if (j.processOverride && j.processOverride.startsWith('closed')) return 'closed';
@@ -882,13 +739,11 @@ function processStatus(j) {
   if (isClosed(j)) return 'closed';
   return 'open';
 }
-
 function statusBadge(j) {
   const s = getStatus(j);
   const L = { interviewed:'🟠 Interviewed', applied:'🟢 Applied', notapplied:'🔵 Not Applied' };
   return `<span class="t-badge t-badge-${s}">${L[s]}</span>`;
 }
-// An interview is "upcoming" if a next-interview date is set and it's today or later
 function isUpcomingInterview(j) {
   if (!j.nextInterviewDate) return false;
   const today = new Date(); today.setHours(0,0,0,0);
@@ -921,13 +776,10 @@ function processBadge(j) {
   if (ps === 'closed') return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#f5f5f5;color:#999;border:1px solid #ddd;">${closedLabel}</span>`;
   return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#fff8e6;color:#b07800;border:1px solid #ffd166;">– Pending</span>`;
 }
-
 function onProcessOverrideChange(val) {
-  // Auto-tick relevant checkboxes when user picks a closed reason
   if (val === 'closed_thankyou') document.getElementById('f-thankYouEmail').checked = true;
   if (val === 'closed_withdrew')  document.getElementById('f-choseNotToApply').checked = true;
   if (val === 'open' || val === '') {
-    // Clear closure checkboxes if reopening
     document.getElementById('f-thankYouEmail').checked  = false;
     document.getElementById('f-choseNotToApply').checked = false;
   }
@@ -937,7 +789,6 @@ function shortHost(url) {
   if (!url || !url.startsWith('http')) return '';
   try { return new URL(url).hostname.replace('www.',''); } catch(e) { return ''; }
 }
-
 function getFiltered() {
   const q = document.getElementById('t-search').value.toLowerCase();
   const fS = document.getElementById('t-filter-status').value;
@@ -966,7 +817,6 @@ function getFiltered() {
     return true;
   });
 }
-
 function tSortBy(col) {
   if (tSortCol === col) tSortDir *= -1;
   else { tSortCol = col; tSortDir = -1; }
@@ -980,14 +830,8 @@ function tSorted(arr) {
     return av < bv ? -tSortDir : av > bv ? tSortDir : 0;
   });
 }
-
-// ─────────────────────────────────────────────────────────────
-//  RENDER TRACKER
-// ─────────────────────────────────────────────────────────────
 function renderTracker() {
   let filtered = tSorted(getFiltered());
-  // In Open tab: jobs with an upcoming interview float to the very top (soonest first),
-  // then already-interviewed processes, then the rest
   if (tTab === 'open') {
     const upcoming = filtered
       .filter(j => isUpcomingInterview(j))
@@ -999,21 +843,17 @@ function renderTracker() {
       ...remaining.filter(j => !j.interviewed)
     ];
   }
-  // In Upcoming tab: always sort soonest first regardless of column sort
   if (tTab === 'upcoming') {
     filtered = [...filtered].sort((a,b) => new Date(a.nextInterviewDate) - new Date(b.nextInterviewDate));
   }
   document.getElementById('t-count').textContent = `Showing ${filtered.length} of ${jobs.length} jobs`;
-
   const tbody = document.getElementById('t-tbody');
   const empty = document.getElementById('t-empty');
-
   if (!filtered.length) {
     tbody.innerHTML = ''; empty.style.display = '';
     return;
   }
   empty.style.display = 'none';
-
   tbody.innerHTML = filtered.map(j => {
     const urlHost = shortHost(j.url);
     const urlHtml = urlHost ? `<a class="t-url-link" href="${esc(j.url)}" target="_blank">↗ ${esc(urlHost)}</a>` : '';
@@ -1046,58 +886,42 @@ function renderTracker() {
   }).join('');
   updateNavStats();
 }
-
 function setTrackerTab(tab, btn) {
   tTab = tab;
   document.querySelectorAll('.t-tab').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderTracker();
 }
-
 function populateMonthFilter() {
   const months = [...new Set(jobs.map(j=>j.month).filter(Boolean))].sort().reverse();
   const sel = document.getElementById('t-filter-month');
   sel.innerHTML = '<option value="">All months</option>';
   months.forEach(m => { const o=document.createElement('option'); o.value=m; o.textContent=m; sel.appendChild(o); });
 }
-
 document.getElementById('t-search').addEventListener('input', renderTracker);
 document.getElementById('t-filter-status').addEventListener('change', renderTracker);
 document.getElementById('t-filter-month').addEventListener('change', renderTracker);
 document.getElementById('t-filter-method').addEventListener('change', renderTracker);
-
-// ─────────────────────────────────────────────────────────────
-//  ADD / EDIT MODAL
-// ─────────────────────────────────────────────────────────────
 function onCompanyInput(val) {
   const hint = document.getElementById('company-hint');
   if (!hint || !val.trim()) { if (hint) hint.innerHTML = ''; return; }
-
   const q = val.trim().toLowerCase();
-  // Find all jobs matching this company name (excluding current edit)
   const matches = jobs.filter(j => {
     if (editId && j.id === editId) return false;
     return (j.company||'').toLowerCase() === q;
   });
-
   if (matches.length === 0) {
-    // Check for partial match to auto-copy companyType
     const partial = jobs.find(j => (j.company||'').toLowerCase() === q && j.companyType);
     hint.innerHTML = '';
     return;
   }
-
-  // Auto-copy companyType from existing entry if not already set
   const withType = matches.find(j => j.companyType);
   if (withType && !document.getElementById('f-companyType').value) {
     document.getElementById('f-companyType').value = withType.companyType;
   }
-
-  // Flag duplicate
   const openCount  = matches.filter(j => isOpen(j)).length;
   const totalCount = matches.length;
   const names = [...new Set(matches.map(j => j.title||'?'))].slice(0,3).join(', ');
-
   let msg = '', color = '';
   if (openCount > 0) {
     msg = `⚠️ ${totalCount} existing entr${totalCount>1?'ies':'y'} — ${openCount} still OPEN (${names})`;
@@ -1108,7 +932,6 @@ function onCompanyInput(val) {
   }
   hint.innerHTML = `<span style="color:${color}">${msg}</span>`;
 }
-
 function openAddModal() {
   editId = null;
   document.getElementById('modal-title').textContent = 'Add Job';
@@ -1146,7 +969,6 @@ function clearForm() {
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => document.getElementById('f-'+k).checked=false);
 }
 function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
-
 function saveJob() {
   const company = document.getElementById('f-company').value.trim();
   const title = document.getElementById('f-title').value.trim();
@@ -1183,10 +1005,6 @@ function saveJob() {
   document._pendingFitScore = null;
   saveJobs(); scheduleGhSync(); closeModal(); renderTracker();
 }
-
-// ─────────────────────────────────────────────────────────────
-//  DETAIL MODAL
-// ─────────────────────────────────────────────────────────────
 function openDetail(id) {
   const j = jobs.find(x=>x.id===id); if (!j) return;
   document.getElementById('detail-title').textContent = (j.company||'–') + (j.title ? ' – '+j.title : '');
@@ -1215,20 +1033,12 @@ function openDetail(id) {
   document.getElementById('detail-overlay').classList.remove('hidden');
 }
 function closeDetail() { document.getElementById('detail-overlay').classList.add('hidden'); }
-
-// ─────────────────────────────────────────────────────────────
-//  DELETE
-// ─────────────────────────────────────────────────────────────
 function deleteJob(id) {
   if (!confirm('Delete this entry?')) return;
   jobs = jobs.filter(x=>x.id!==id);
   saveJobs(); scheduleGhSync(); renderTracker(); updateNavStats();
   showToast('Deleted','🗑');
 }
-
-// ─────────────────────────────────────────────────────────────
-//  EXPORT CSV
-// ─────────────────────────────────────────────────────────────
 function exportBackup() {
   const backup = {
     version: 'Noy-hub-backup-v1',
@@ -1246,7 +1056,6 @@ function exportBackup() {
   a.click();
   showToast(`Backup saved — ${jobs.length} jobs exported`,'💾');
 }
-
 function importBackup(event) {
   const file = event.target.files[0];
   if (!file) return;
@@ -1255,50 +1064,37 @@ function importBackup(event) {
     try {
       const backup = JSON.parse(e.target.result);
       if (!backup.jobs || !Array.isArray(backup.jobs)) throw new Error('Invalid backup file — no jobs array found');
-      
-      // Confirm before overwriting
       const msg = `Restore ${backup.jobs.length} jobs from backup taken on ${backup.exportedAt ? new Date(backup.exportedAt).toLocaleDateString() : 'unknown date'}?
-
 This will replace your current ${jobs.length} jobs.`;
       if (!confirm(msg)) return;
-
       jobs = backup.jobs;
       saveJobs();
-
       if (backup.finderJobs) { finderJobs = backup.finderJobs; }
       if (backup.finderFeedback) { finderFeedback = backup.finderFeedback; }
       saveFinderState();
       if (backup.settings) { localStorage.setItem(LS_SETTINGS, JSON.stringify(backup.settings)); loadSettings(); }
-
       renderTracker(); renderFinderJobs(); updateNavStats(); scheduleGhSync();
       showToast(`Restored ${jobs.length} jobs successfully`,'✅');
     } catch(err) {
       alert('Failed to restore backup: ' + err.message);
     }
-    // Reset file input so same file can be re-imported if needed
     event.target.value = '';
   };
   reader.readAsText(file);
 }
-
 function exportCSV() {
   const cols = ['month','company','title','url','applicationMethod','status','interviewNotes','companySize','applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','numInterviews','nextInterviewDate','sqlTest','analyticsTest','caseStudy','lastUpdate'];
   const rows = getFiltered().map(j => cols.map(c=>`"${String(j[c]??'').replace(/"/g,'""')}"`).join(','));
   const csv = [cols.join(','), ...rows].join('\n');
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'}));
+  a.href = URL.createObjectURL(new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'}));
   a.download = 'Noy_jobs_'+new Date().toISOString().slice(0,10)+'.csv';
   a.click();
   showToast('CSV exported','⬇');
 }
-
-// ─────────────────────────────────────────────────────────────
-//  ANALYSIS
-// ─────────────────────────────────────────────────────────────
 function renderSearchAnalysis() {
   const total   = jobs.length;
   const applied = jobs.filter(j=>j.applied===true).length;
-  // B2x breakdown
   const b2xTypes = ['B2C','B2B','B2B2C','Marketplace','Government'];
   const byB2x = {};
   b2xTypes.forEach(t => {
@@ -1321,14 +1117,10 @@ function renderSearchAnalysis() {
   const totalInt= jobs.reduce((s,j)=>s+(j.numInterviews||0),0);
   const respRate= applied>0 ? (gotResp/applied*100).toFixed(0)+'%' : 'N/A';
   const intRate = applied>0 ? (interviewed/applied*100).toFixed(0)+'%' : 'N/A';
-
-  // by month
   const byMonth = {};
   jobs.forEach(j=>{ const m=j.month||'Unknown'; if(!byMonth[m]) byMonth[m]={t:0,a:0,i:0,r:0}; byMonth[m].t++; if(j.applied)byMonth[m].a++; if(j.interviewed)byMonth[m].i++; if(j.gotResponse)byMonth[m].r++; });
   const months = Object.keys(byMonth).filter(m=>m!=='Unknown').sort().reverse().slice(0,10);
   const maxMonth = Math.max(...months.map(m=>byMonth[m].t));
-
-  // by cluster (title-based)
   function detectCluster(j) {
     const t = (j.title||'').toLowerCase();
     if (t.includes('marketing')||t.includes('mktg')) return 'Marketing';
@@ -1339,15 +1131,9 @@ function renderSearchAnalysis() {
   const byCluster = {};
   jobs.forEach(j=>{ const c=detectCluster(j); if(!byCluster[c]) byCluster[c]={t:0,a:0,i:0}; byCluster[c].t++; if(j.applied)byCluster[c].a++; if(j.interviewed)byCluster[c].i++; });
   const clusterColors = { Data:'#4f6ef7', Business:'#2aaa7a', Product:'#e05b6a', Marketing:'#d4900a' };
-
-  // Top companies by interviews
   const topInt = [...jobs].filter(j=>j.numInterviews>0).sort((a,b)=>(b.numInterviews||0)-(a.numInterviews||0)).slice(0,8);
-
-  // Interview feedback mentions
   const rejectedFeedback = jobs.filter(j=>j.interviewNotes && j.interviewNotes.length>50 && (j.interviewNotes.includes('SQL')||j.interviewNotes.includes('not')||j.interviewNotes.includes('missing')||j.interviewNotes.includes('improvement')));
-
   document.getElementById('analysis-content').innerHTML = `
-    <!-- KPIs -->
     <div class="a-grid4">
       <div class="kpi-card blue"><div class="kpi-num">${total}</div><div class="kpi-label">Total Tracked</div></div>
       <div class="kpi-card green"><div class="kpi-num">${openCount}</div><div class="kpi-label">🟢 Open Processes</div><div class="kpi-sub">actively live</div></div>
@@ -1360,8 +1146,6 @@ function renderSearchAnalysis() {
       <div class="kpi-card red"><div class="kpi-num">${totalInt}</div><div class="kpi-label">Total Stages</div></div>
       <div class="kpi-card purple"><div class="kpi-num">${sqlTest+anTest+caseS}</div><div class="kpi-label">Tests Taken</div><div class="kpi-sub">SQL:${sqlTest} Analytics:${anTest} Case:${caseS}</div></div>
     </div>
-
-    <!-- Funnel + Month chart -->
     <div class="a-grid2">
       <div class="analysis-section">
         <div class="a-section-title">Application Funnel</div>
@@ -1375,7 +1159,6 @@ function renderSearchAnalysis() {
           ${funnelStep('Interviewed', interviewed, total, '#ffc1c1', '#a63228')}
         </div>
       </div>
-
       <div class="analysis-section">
         <div class="a-section-title">Activity by Month</div>
         <div class="bar-chart">
@@ -1392,8 +1175,6 @@ function renderSearchAnalysis() {
         </div>
       </div>
     </div>
-
-    <!-- Cluster breakdown + Top interviews -->
     <div class="a-grid2">
       <div class="analysis-section">
         <div class="a-section-title">By Role Cluster</div>
@@ -1411,7 +1192,6 @@ function renderSearchAnalysis() {
           </tbody>
         </table>
       </div>
-
       <div class="analysis-section">
         <div class="a-section-title">B2C vs B2B Breakdown</div>
         <table class="mini-table">
@@ -1451,8 +1231,6 @@ function renderSearchAnalysis() {
         </table>
       </div>
     </div>
-
-    <!-- Insights -->
     <div class="analysis-section">
       <div class="a-section-title">Key Insights</div>
       <div class="insights-grid">
@@ -1500,15 +1278,14 @@ function renderSearchAnalysis() {
           <div class="insight-icon">🔵</div>
           <div class="insight-title">B2C vs B2B Split</div>
           <div class="insight-body">
-            Your history spans both sectors heavily. B2C gaming roles (BeachBum background) show strong match — lean into this narrative in interviews.
-            Highlight <strong>LTV, cohort analysis, A/B testing</strong> prominently.
+            Your history spans both sectors. Lean on the SciPlay/Playtika gaming background to tell a strong B2C narrative in interviews.
+            Highlight <strong>economy design, retention, and A/B testing</strong> prominently.
           </div>
         </div>
       </div>
     </div>
   `;
 }
-
 function funnelStep(label, n, total, bgColor, textColor) {
   const pct = total > 0 ? n/total*100 : 0;
   return `<div class="funnel-step" style="max-width:${Math.max(40,pct).toFixed(0)}%;min-width:260px;align-self:center;">
@@ -1518,16 +1295,11 @@ function funnelStep(label, n, total, bgColor, textColor) {
     <span class="funnel-pct">${pct.toFixed(0)}%</span>
   </div>`;
 }
-
-// ─────────────────────────────────────────────────────────────
-//  FINDER (original logic)
-// ─────────────────────────────────────────────────────────────
 let finderJobs = [];
 let finderFeedback = {};
 let activeFilter = 'all';
 let activeClusters = new Set(['data','business','product','marketing']);
 let isSearching = false;
-
 function saveSettings() {
   localStorage.setItem(LS_SETTINGS, JSON.stringify({
     apiKey:    document.getElementById('api-key').value,
@@ -1553,11 +1325,9 @@ function loadSettings() {
     if (s.ghUser)  document.getElementById('gh-user').value  = s.ghUser;
     if (s.ghRepo)  document.getElementById('gh-repo').value  = s.ghRepo;
   } catch(e) {}
-  updateStatus(); // update status badge only — does NOT overwrite localStorage
+  updateStatus();
 }
 function updateStatus() {
-  // Read directly from DOM to check what's filled — do NOT call saveSettings here
-  // saveSettings is called by oninput on each field, so it only runs when user types
   const hasApi = !!document.getElementById('api-key').value.trim();
   const hasTg = !!(document.getElementById('tg-token').value.trim()&&document.getElementById('tg-chat-id').value.trim());
   const hasGh = !!(document.getElementById('gh-token').value.trim()&&document.getElementById('gh-user').value.trim()&&document.getElementById('gh-repo').value.trim());
@@ -1583,7 +1353,6 @@ function setFilter(f, btn) {
   btn.classList.add('active');
   renderFinderJobs();
 }
-
 function log(msg, type='') {
   const el = document.getElementById('agent-log');
   if (!el) { console.log('[' + (type||'info') + ']', msg); return; }
@@ -1594,7 +1363,6 @@ function log(msg, type='') {
   d.innerHTML = `<span class="ts">${ts}</span><span class="msg">${msg}</span>`;
   el.appendChild(d); el.scrollTop = el.scrollHeight;
 }
-
 async function detectChatId() {
   const token = document.getElementById('tg-token').value.trim();
   if (!token) { showToast('Enter your Bot Token first','⚠️'); return; }
@@ -1608,7 +1376,6 @@ async function detectChatId() {
     } else showToast('No messages. Message your bot first!','⚠️');
   } catch(e) { showToast('Could not reach Telegram','❌'); }
 }
-
 async function sendTelegramAlert(job) {
   const token = document.getElementById('tg-token').value.trim();
   const chatId = document.getElementById('tg-chat-id').value.trim();
@@ -1620,14 +1387,11 @@ async function sendTelegramAlert(job) {
     log(`📨 Telegram: sent alert for "${job.title}"`, 'success');
   } catch(e) { log(`Telegram failed: ${e.message}`, 'warn'); }
 }
-
 async function sendTestAlert() {
   await sendTelegramAlert({title:'Senior Data Analyst',company:'Wix.com',location:'Tel Aviv, Israel',remote:true,salary:'28,000–35,000 ILS',matchScore:91,matchReason:'B2C – aligns with your current direction.',url:'https://www.linkedin.com/jobs/'});
   showToast('Test alert sent!','✈️');
 }
-
 function tgEsc(s) { if(!s)return''; return String(s).replace(/[_[\]()~`>#+=|{}.!-]/g,c=>'\\'+c); }
-
 function detectB2C(job) {
   const signals = ['b2c','gaming','consumer','ecommerce','e-commerce','retail','fintech','marketplace','mobile app'];
   const txt = ((job.matchReason||'')+(job.company||'')+(job.title||'')).toLowerCase();
@@ -1637,23 +1401,16 @@ function buildLinkedIn(company) {
   if (!company) return '';
   return `https://www.linkedin.com/company/${company.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}/people/`;
 }
-
-// ── URL Validator ─────────────────────────────────────────────
-// LinkedIn blocks all proxy fetches — trust URL format only.
-// Non-LinkedIn: fetch via proxy to check for 404/closed.
 async function validateJobUrl(url, company) {
   if (!url || !url.startsWith('http')) return { ok: false, reason: 'no URL' };
-
   try {
     const isLinkedIn = url.includes('linkedin.com');
-
     if (isLinkedIn) {
       const hasViewPath = /\/jobs\/view\//i.test(url);
       const hasJobId = /[0-9]{7,}/.test(url);
       if (!hasViewPath || !hasJobId) {
         return { ok: false, reason: 'LinkedIn URL missing /jobs/view/ or numeric job ID' };
       }
-      // Try fetching to catch closed/expired listings
       try {
         const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
         const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(7000) });
@@ -1666,13 +1423,11 @@ async function validateJobUrl(url, company) {
       } catch(e) { /* timeout — fall through, trust URL format */ }
       return { ok: true };
     } else {
-      // For non-LinkedIn: simple fetch with timeout
       const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
       const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(8000) });
       if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
       const data = await res.json();
       const body = (data.contents || '').toLowerCase();
-      // Check for generic 404/not found pages
       if (body.includes('page not found') || body.includes('404') || body.includes('משרה לא נמצאה')) {
         return { ok: false, reason: 'Page not found (404)' };
       }
@@ -1688,26 +1443,18 @@ async function validateJobUrl(url, company) {
     return { ok: false, reason: `Could not verify URL (${e.message})` };
   }
 }
-
-// ─────────────────────────────────────────────────────────────
-//  GITHUB AUTO-SAVE ENGINE
-// ─────────────────────────────────────────────────────────────
-let ghSyncTimer = null;         // debounce handle
-let ghSyncPending = false;      // visual indicator
-let ghFileSha = null;           // required by GitHub API to update a file
-
+let ghSyncTimer = null;
+let ghSyncPending = false;
+let ghFileSha = null;
 function getGhConfig() {
   const s = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
   return { token: s.ghToken, user: s.ghUser, repo: s.ghRepo };
 }
-
 function isGhConfigured() {
   const c = getGhConfig();
   return !!(c.token && c.user && c.repo);
 }
-
-// Call this whenever data changes — debounces to avoid hammering GitHub API
-let ghAppReady = false; // prevents sync during initial load
+let ghAppReady = false;
 function scheduleGhSync() {
   const cfg = getGhConfig();
   if (!ghAppReady) { console.log('GH sync skipped: app not ready'); return; }
@@ -1719,7 +1466,6 @@ function scheduleGhSync() {
   console.log('GH sync scheduled — jobs:', jobs.length, 'token:', cfg.token.slice(0,8)+'...');
   ghSyncTimer = setTimeout(() => syncToGitHub(), 3000);
 }
-
 function setGhSyncStatus(state) {
   const el = document.getElementById('gh-sync-badge');
   if (!el) return;
@@ -1735,9 +1481,7 @@ function setGhSyncStatus(state) {
   el.style.color = s.color;
   el.style.display = s.text ? 'inline' : 'none';
 }
-
 async function getFileSha(config) {
-  // Get current SHA of data.json — needed to update it via API
   try {
     const res = await fetch(
       `https://api.github.com/repos/${config.user}/${config.repo}/contents/data.json`,
@@ -1750,17 +1494,12 @@ async function getFileSha(config) {
   } catch(e) {}
   return null;
 }
-
 async function syncToGitHub(silent = false) {
   if (!isGhConfigured()) return;
   const config = getGhConfig();
   setGhSyncStatus('saving');
-
   try {
-    // Get current SHA (required by GitHub to update a file)
     const sha = await getFileSha(config);
-
-    // Build data.json content
     const dataObj = {
       _meta: {
         description: "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
@@ -1772,22 +1511,17 @@ async function syncToGitHub(silent = false) {
       finderFeedback: finderFeedback,
       settings: {
         threshold: document.getElementById('threshold')?.value || '80'
-        // Note: API key and tokens are NOT saved to GitHub for security
       }
     };
-
-    // btoa() fails on Hebrew/Unicode — use TextEncoder for safe base64 encoding
     const jsonStr = JSON.stringify(dataObj, null, 2);
     const bytes = new TextEncoder().encode(jsonStr);
     const binStr = Array.from(bytes).map(b => String.fromCharCode(b)).join('');
     const content = btoa(binStr);
-
     const body = {
       message: `Auto-save: ${jobs.length} jobs — ${new Date().toLocaleString('he-IL')}`,
       content: content,
-      ...(sha ? { sha } : {})  // include sha only if file already exists
+      ...(sha ? { sha } : {})
     };
-
     const res = await fetch(
       `https://api.github.com/repos/${config.user}/${config.repo}/contents/data.json`,
       {
@@ -1800,7 +1534,6 @@ async function syncToGitHub(silent = false) {
         body: JSON.stringify(body)
       }
     );
-
     if (res.ok) {
       setGhSyncStatus('idle');
       if (!silent) showToast('Saved to GitHub ✓', '🐙');
@@ -1818,10 +1551,9 @@ async function syncToGitHub(silent = false) {
   } catch(e) {
     setGhSyncStatus('error');
     console.error('GitHub sync failed:', e.message);
-    showToast('GitHub sync failed: ' + e.message.slice(0,80), '⚠️'); // always show — silent only skips success toast
+    showToast('GitHub sync failed: ' + e.message.slice(0,80), '⚠️');
   }
 }
-
 async function testGitHubConnection() {
   const btn = document.getElementById('gh-test-btn');
   const status = document.getElementById('gh-status');
@@ -1833,7 +1565,6 @@ async function testGitHubConnection() {
   btn.disabled = true;
   btn.textContent = '⏳ Testing…';
   status.textContent = '';
-
   const config = getGhConfig();
   try {
     const res = await fetch(
@@ -1844,7 +1575,6 @@ async function testGitHubConnection() {
       const repo = await res.json();
       status.textContent = `✓ Connected to ${repo.full_name}`;
       status.style.color = '#43d9ad';
-      // Do an immediate sync to confirm write access too
       await syncToGitHub(true);
     } else {
       const err = await res.json();
@@ -1859,46 +1589,33 @@ async function testGitHubConnection() {
     btn.textContent = '🔌 Test connection';
   }
 }
-
-// ─────────────────────────────────────────────────────────────
-//  AUTO-FILL FROM URL
-// ─────────────────────────────────────────────────────────────
 function onUrlInput(val) {
   const btn = document.getElementById('autofill-btn');
   if (btn) btn.style.background = val.startsWith('http') ? '#4f6ef7' : '';
 }
-
 async function autoFillFromUrl() {
   const url = document.getElementById('f-url').value.trim();
   const status = document.getElementById('autofill-status');
   const btn = document.getElementById('autofill-btn');
   if (!url.startsWith('http')) { status.textContent = '⚠ Enter a valid URL first'; return; }
-
   btn.disabled = true; btn.textContent = '⏳ Fetching…';
   status.textContent = 'Scraping job page…';
   status.style.color = '#6080ff';
-
   try {
-    // Step 1: Scrape via allorigins proxy
     const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
     const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
     const data = await res.json();
     const html = data.contents || '';
-
-    // Try to extract fields from raw HTML
     const extracted = extractFromHtml(html, url);
-
     if (extracted.title && extracted.company) {
-      // Scrape succeeded — fill fields
       fillModalFields(extracted);
       status.textContent = `✓ Auto-filled from page (${extracted.source})`;
       status.style.color = '#43d9ad';
     } else {
-      // Scrape got partial data — try Claude API as fallback
       status.textContent = 'Scrape partial — using Claude to extract…';
       const apiKey = document.getElementById('api-key').value.trim();
       if (!apiKey) {
-        fillModalFields(extracted); // fill what we got
+        fillModalFields(extracted);
         status.textContent = '⚠ Partial fill — add API key for smarter extraction';
         status.style.color = '#ffd166';
         return;
@@ -1912,7 +1629,6 @@ async function autoFillFromUrl() {
   } catch(e) {
     status.textContent = `⚠ Could not fetch page: ${e.message}`;
     status.style.color = '#ff6b6b';
-    // Still try Claude if we have an API key
     const apiKey = document.getElementById('api-key').value.trim();
     if (apiKey) {
       status.textContent = 'Trying Claude without page content…';
@@ -1930,20 +1646,14 @@ async function autoFillFromUrl() {
     btn.disabled = false; btn.textContent = '🔍 Auto-fill';
   }
 }
-
 function extractFromHtml(html, url) {
-  // Parse job details from raw HTML using heuristics
   const txt = html.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');
   const result = { source: 'scrape' };
-
-  // Title — try common patterns
   const titleM = html.match(/<title[^>]*>([^<]+)<\/title>/i);
   if (titleM) {
-    let t = titleM[1].replace(/\s*[|\-–].*$/, '').trim(); // strip " | Company" suffix
+    let t = titleM[1].replace(/\s*[|\-–].*$/, '').trim();
     if (t.length > 5 && t.length < 100) result.title = t;
   }
-
-  // LinkedIn specific
   if (url.includes('linkedin.com')) {
     const liTitle = html.match(/class="[^"]*job-details-jobs-unified-top-card__job-title[^"]*"[^>]*>\s*<[^>]+>([^<]+)/i);
     if (liTitle) result.title = liTitle[1].trim();
@@ -1952,34 +1662,25 @@ function extractFromHtml(html, url) {
     const liLoc = html.match(/class="[^"]*job-details-jobs-unified-top-card__bullet[^"]*"[^>]*>([^<]+)/i);
     if (liLoc) result.location = liLoc[1].trim();
   }
-
-  // Company from URL domain
   if (!result.company) {
     const domainM = url.match(/https?:\/\/(?:www\.)?([^./]+)/);
     if (domainM && !['linkedin','drushim','alljobs','glassdoor','indeed'].includes(domainM[1])) {
       result.company = domainM[1].charAt(0).toUpperCase() + domainM[1].slice(1);
     }
   }
-
-  // Location keywords
   if (!result.location) {
     const locM = txt.match(/\b(Tel Aviv|Herzliya|Ramat Gan|Petah Tikva|Jerusalem|Haifa|Remote|Israel)\b/i);
     if (locM) result.location = locM[1];
   }
-
-  // Source detection
   result.source = url.includes('linkedin') ? 'LinkedIn scrape' :
                   url.includes('drushim')  ? 'Drushim scrape' :
                   url.includes('alljobs')  ? 'AllJobs scrape' : 'page scrape';
-
   return result;
 }
-
 async function extractWithClaude(pageText, url, apiKey) {
   const prompt = pageText
     ? `Extract job details from this job posting HTML/text. URL: ${url}\n\nPage content (first 8000 chars):\n${pageText}\n\nReturn ONLY valid JSON with these fields (null if not found): {"title":"","company":"","location":"","companyType":"B2C|B2B|B2B2C|Marketplace|","companySize":""}`
     : `Based on this job URL, infer what you can about the company and role. URL: ${url}\n\nReturn ONLY valid JSON: {"title":"","company":"","location":"","companyType":"B2C|B2B|B2B2C|Marketplace|","companySize":""}`;
-
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -1989,16 +1690,14 @@ async function extractWithClaude(pageText, url, apiKey) {
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001', // cheapest model — ~$0.001 per call
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 300,
       messages: [{ role: 'user', content: prompt }]
     })
   });
   const d = await response.json();
   const text = d.content?.[0]?.text || '{}';
-  // Strip markdown fences and any leading/trailing non-JSON text
   let clean = text.replace(/```json|```/g,'').trim();
-  // Extract just the JSON object if there's surrounding text
   const objMatch = clean.match(/\{[\s\S]*\}/);
   if (objMatch) clean = objMatch[0];
   try {
@@ -2008,35 +1707,21 @@ async function extractWithClaude(pageText, url, apiKey) {
     return {};
   }
 }
-
 function fillModalFields(data) {
   const today = new Date().toISOString().slice(0,10);
   const month = today.slice(0,7);
   if (data.title)       document.getElementById('f-title').value = data.title;
   if (data.company) {
     document.getElementById('f-company').value = data.company;
-    onCompanyInput(data.company); // trigger duplicate check + type copy
+    onCompanyInput(data.company);
   }
   if (data.companyType) document.getElementById('f-companyType').value = data.companyType;
   if (data.companySize) document.getElementById('f-companySize').value = data.companySize;
   if (!document.getElementById('f-month').value) document.getElementById('f-month').value = month;
   if (!document.getElementById('f-lastUpdate').value) document.getElementById('f-lastUpdate').value = today;
-  // Auto-detect LinkedIn
   const url = document.getElementById('f-url').value;
   if (url.includes('linkedin.com')) document.getElementById('f-viaLinkedin').checked = true;
 }
-
-// ─────────────────────────────────────────────────────────────
-//  TELEGRAM → TRACKER SYNC
-// ─────────────────────────────────────────────────────────────
-// Commands you can send to your bot:
-//   thankyou <company>   → ticks thankYouEmail, marks closed
-//   rejected <company>   → adds rejected status, marks closed
-//   interview <company>  → ticks interviewed
-//   applied <company>    → ticks applied
-//   response <company>   → ticks gotResponse
-//   note <company> <text>→ appends text to status notes
-
 const TG_COMMANDS = [
   { pattern: /^(thankyou|thank you|thank-you)\s+(.+)/i,   action: 'thankYouEmail' },
   { pattern: /^(rejected|rejection|reject)\s+(.+)/i,      action: 'rejected'      },
@@ -2045,79 +1730,58 @@ const TG_COMMANDS = [
   { pattern: /^(response|responded|got response)\s+(.+)/i, action: 'gotResponse'   },
   { pattern: /^note\s+(\S+)\s+(.+)/i,                      action: 'note'          },
 ];
-
-// Store last processed Telegram update_id to avoid reprocessing
 const LS_TG_OFFSET = 'Noy_tg_offset';
-
 function findJobByCompany(companyQuery) {
   const q = companyQuery.toLowerCase().trim();
-  // Exact match first
   let match = jobs.find(j => (j.company||'').toLowerCase() === q);
   if (match) return match;
-  // Partial match
   match = jobs.find(j => (j.company||'').toLowerCase().includes(q) || q.includes((j.company||'').toLowerCase()));
   return match || null;
 }
-
 async function syncFromTelegram() {
   const token  = document.getElementById('tg-token').value.trim();
   const chatId = document.getElementById('tg-chat-id').value.trim();
   const btn    = document.getElementById('tg-sync-btn');
   const status = document.getElementById('tg-sync-status');
-
   if (!token || !chatId) {
     showToast('Set up Telegram token and Chat ID in Settings first', '⚠️');
     return;
   }
-
   btn.disabled = true;
   btn.textContent = '⏳ Syncing…';
   status.style.display = 'inline';
   status.textContent = 'Reading messages…';
-
   try {
     const offset = parseInt(localStorage.getItem(LS_TG_OFFSET) || '0');
     const url = `https://api.telegram.org/bot${token}/getUpdates?offset=${offset}&limit=100&timeout=0`;
     const res = await fetch(url);
     const data = await res.json();
-
     if (!data.ok) throw new Error(data.description || 'Telegram API error');
-
     const updates = data.result || [];
     if (!updates.length) {
       status.textContent = '✓ No new messages';
       setTimeout(() => { status.style.display = 'none'; }, 3000);
       return;
     }
-
     let processed = 0, matched = 0, unmatched = [];
-    const changes = []; // collect all changes for one bulk save
-
+    const changes = [];
     for (const update of updates) {
       const msg = update.message || update.edited_message;
       if (!msg) continue;
-
-      // Only process messages from your own chat
       if (String(msg.chat.id) !== String(chatId)) continue;
-
       const text = (msg.text || '').trim();
       let acted = false;
-
       for (const cmd of TG_COMMANDS) {
         const m = text.match(cmd.pattern);
         if (!m) continue;
-
         const companyQuery = cmd.action === 'note' ? m[1] : m[2];
         const noteText     = cmd.action === 'note' ? m[2] : null;
         const job = findJobByCompany(companyQuery);
-
         if (!job) {
           unmatched.push(`"${companyQuery}" (${cmd.action})`);
           acted = true;
           break;
         }
-
-        // Apply the action
         const change = { jobId: job.id, action: cmd.action, company: job.company };
         if (cmd.action === 'thankYouEmail') {
           job.thankYouEmail = true;
@@ -2143,19 +1807,14 @@ async function syncFromTelegram() {
       }
       processed++;
     }
-
-    // Save last update_id so we don't reprocess
     const lastId = updates[updates.length - 1].update_id + 1;
     localStorage.setItem(LS_TG_OFFSET, String(lastId));
-
     if (changes.length > 0) {
       saveJobs();
       scheduleGhSync();
       renderTracker();
       updateNavStats();
     }
-
-    // Report results
     const lines = [];
     if (matched > 0) {
       lines.push(`✓ Updated ${matched} job${matched>1?'s':''}: ${changes.map(c=>c.company+' ('+c.action+')').join(', ')}`);
@@ -2166,14 +1825,11 @@ async function syncFromTelegram() {
     if (matched === 0 && unmatched.length === 0) {
       lines.push('No job commands found in messages');
     }
-
     const summary = lines.join(' | ');
     status.textContent = summary;
     status.style.color = matched > 0 ? '#43d9ad' : '#ffd166';
     if (matched > 0) showToast(`Synced ${matched} update${matched>1?'s':''} from Telegram`, '📩');
-
     setTimeout(() => { status.style.display = 'none'; status.style.color = ''; }, 8000);
-
   } catch(e) {
     status.textContent = '✗ ' + e.message;
     status.style.color = '#ff6b6b';
@@ -2183,29 +1839,17 @@ async function syncFromTelegram() {
     btn.textContent = '📩 Sync Telegram';
   }
 }
-
-
-
-// ═══════════════════════════════════════════════════════
-//  SETTINGS EXPORT VIA URL HASH + QR CODE
-// ═══════════════════════════════════════════════════════
-
 async function exportSettingsQR() {
   const s = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
   if (!s.apiKey && !s.ghToken) {
     showToast('No settings to export — fill in your keys first', '⚠️');
     return;
   }
-
-  // Encode settings as base64 in URL hash — never sent to any server
   const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(s))));
   const url = window.location.origin + window.location.pathname + '#settings=' + encoded;
-
   const container = document.getElementById('qr-container');
   const canvas = document.getElementById('qr-canvas');
   container.style.display = 'block';
-
-  // Load QR library dynamically
   if (!window.QRCode) {
     await new Promise((res, rej) => {
       const s = document.createElement('script');
@@ -2214,7 +1858,6 @@ async function exportSettingsQR() {
       document.head.appendChild(s);
     });
   }
-
   canvas.innerHTML = '';
   try {
     new QRCode(canvas, {
@@ -2227,47 +1870,33 @@ async function exportSettingsQR() {
     });
     showToast('QR code generated — scan with your iPhone', '📱');
   } catch(e) {
-    // Fallback: show clickable link if QR fails
     canvas.innerHTML = '<a href="' + url + '" style="font-size:11px;word-break:break-all;color:var(--accent);">' + url.slice(0, 80) + '...</a>';
     showToast('QR failed — tap the link instead', '⚠️');
     console.error('QR error:', e);
   }
 }
-
-// On load: check if URL hash contains settings and auto-import
 function checkHashSettings() {
   const hash = window.location.hash;
   if (!hash.startsWith('#settings=')) return;
-
   try {
     const encoded = hash.slice('#settings='.length);
     const s = JSON.parse(decodeURIComponent(escape(atob(encoded))));
-
-    // Don't overwrite existing settings silently — ask first
     const existing = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
     const hasExisting = !!(existing.apiKey || existing.ghToken);
-
     if (hasExisting) {
       if (!confirm('Import settings from QR code? This will overwrite your current settings.')) return;
     }
-
     localStorage.setItem(LS_SETTINGS, JSON.stringify(s));
     loadSettings();
-    // Clean URL
     history.replaceState(null, '', window.location.pathname);
     showToast('✓ Settings imported from QR code', '📱');
   } catch(e) {
     console.warn('Failed to parse hash settings:', e);
   }
 }
-
-// ═══════════════════════════════════════════════════════
-//  AIAPPLY IMPORTER
-// ═══════════════════════════════════════════════════════
 const AIAPPLY_USER_ID = '115555783026739498037';
 const AIAPPLY_BASE    = 'https://aiapply.co/app/auto-apply/proxy/v1/users/' + AIAPPLY_USER_ID;
 let aiApplyPreviewJobs = [];
-
 function openAiApplyImport() {
   document.getElementById('aiapply-modal').classList.remove('hidden');
   document.getElementById('aiapply-status').textContent = '';
@@ -2276,31 +1905,24 @@ function openAiApplyImport() {
   document.getElementById('aiapply-fetch-btn').style.display = '';
   aiApplyPreviewJobs = [];
 }
-
 function closeAiApplyModal() {
   document.getElementById('aiapply-modal').classList.add('hidden');
 }
-
 async function fetchAiApplyJobs() {
   const token = document.getElementById('aiapply-token').value.trim();
   if (!token) { document.getElementById('aiapply-status').textContent = '⚠️ Paste your access_token first'; return; }
-
   const btn = document.getElementById('aiapply-fetch-btn');
   btn.disabled = true;
   btn.textContent = '⏳ Fetching...';
   document.getElementById('aiapply-status').textContent = 'Fetching jobs from AIApply...';
   document.getElementById('aiapply-status').style.color = 'var(--text-muted)';
-
   try {
-    // Fetch all pages
     let allJobs = [];
     let offset = 0;
     const limit = 50;
     let total = Infinity;
-
     while (offset < total) {
       const apiUrl = AIAPPLY_BASE + '/queue/jobs?limit=' + limit + '&offset=' + offset + '&search=&status=&order=desc&sort_by=created_at';
-      // Route through allorigins proxy to avoid CORS block
       const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(apiUrl) + '&headers=' + encodeURIComponent(JSON.stringify({'Authorization':'Bearer '+token,'Accept':'application/json'}));
       const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(15000) });
       if (!res.ok) throw new Error('Proxy error ' + res.status);
@@ -2316,11 +1938,8 @@ async function fetchAiApplyJobs() {
       document.getElementById('aiapply-status').textContent = 'Fetched ' + allJobs.length + ' / ' + total + ' jobs...';
       if ((data.jobs||[]).length < limit) break;
     }
-
-    // Map AIApply fields → tracker fields
     const existingUrls = new Set(jobs.map(j => (j.url||'').toLowerCase().trim()));
     const existingKeys = new Set(jobs.map(j => ((j.company||'')+(j.title||'')).toLowerCase().replace(/\s/g,'')));
-
     aiApplyPreviewJobs = allJobs.map(j => {
       const month = (j.created_at||'').slice(0,7);
       const fitScore = j.fit_score ? Math.round(j.fit_score * 100) : null;
@@ -2329,11 +1948,9 @@ async function fetchAiApplyJobs() {
         j.key_matches?.length ? 'Strengths: ' + j.key_matches.join(', ') : null,
         j.key_gaps?.length ? 'Gaps: ' + j.key_gaps.join(', ') : null,
       ].filter(Boolean).join(' | ');
-
       const url = (j.job_link||'').toLowerCase().trim();
       const key = ((j.company_name||'')+(j.job_title||'')).toLowerCase().replace(/\s/g,'');
       const isDuplicate = existingUrls.has(url) || existingKeys.has(key);
-
       return {
         _duplicate: isDuplicate,
         id: 'aiapply-' + j.id,
@@ -2349,11 +1966,8 @@ async function fetchAiApplyJobs() {
         viaLinkedin: (j.job_link||'').includes('linkedin.com') || null,
       };
     });
-
     const newJobs   = aiApplyPreviewJobs.filter(j => !j._duplicate);
     const dupeJobs  = aiApplyPreviewJobs.filter(j => j._duplicate);
-
-    // Show preview
     const previewEl = document.getElementById('aiapply-preview');
     previewEl.style.display = '';
     previewEl.innerHTML = '<div style="font-weight:600;margin-bottom:8px;color:var(--text);">' +
@@ -2365,14 +1979,11 @@ async function fetchAiApplyJobs() {
         ' <span style="color:var(--text-dim)">' + (j.month||'') + '</span></div>'
       ).join('') +
       (newJobs.length > 10 ? '<div style="color:var(--text-dim);margin-top:6px;">...and ' + (newJobs.length-10) + ' more</div>' : '');
-
     document.getElementById('aiapply-status').textContent = '✓ Ready to import ' + newJobs.length + ' new jobs';
     document.getElementById('aiapply-status').style.color = '#1a7a4a';
-
     if (newJobs.length > 0) {
       document.getElementById('aiapply-import-btn').style.display = '';
     }
-
   } catch(e) {
     document.getElementById('aiapply-status').textContent = '⚠️ ' + e.message;
     document.getElementById('aiapply-status').style.color = 'var(--accent2)';
@@ -2381,14 +1992,12 @@ async function fetchAiApplyJobs() {
     btn.textContent = '🔍 Preview Import';
   }
 }
-
 function doAiApplyImport() {
   const toImport = aiApplyPreviewJobs.filter(j => !j._duplicate).map(j => {
     const { _duplicate, ...clean } = j;
     return clean;
   });
   if (toImport.length === 0) return;
-
   jobs = [...toImport, ...jobs];
   saveJobs();
   scheduleGhSync();
@@ -2398,19 +2007,12 @@ function doAiApplyImport() {
   closeAiApplyModal();
   showToast('Imported ' + toImport.length + ' jobs from AIApply ✓', '📥');
 }
-
-// ═══════════════════════════════════════════════════════
-//  JOB FIT ANALYZER
-// ═══════════════════════════════════════════════════════
-
-let lastAnalysis = null; // store result for add-to-tracker
-
+let lastAnalysis = null;
 function onJdInput() {
   const val = document.getElementById('jd-input').value;
   document.getElementById('jd-char-count').textContent = val.length + ' chars';
   document.getElementById('analyze-btn').disabled = val.trim().length < 100;
 }
-
 function clearAnalyzer() {
   document.getElementById('jd-input').value = '';
   document.getElementById('jd-url').value = '';
@@ -2423,42 +2025,30 @@ function clearAnalyzer() {
   document.getElementById('agent-log').classList.remove('visible');
   lastAnalysis = null;
 }
-
 async function fetchJdFromUrl() {
   const url = document.getElementById('jd-url').value.trim();
   if (!url || !url.startsWith('http')) { showToast('Enter a valid URL first', '⚠️'); return; }
-
   const btn = document.getElementById('fetch-url-btn');
   const status = document.getElementById('fetch-status');
   btn.disabled = true;
   btn.textContent = '⏳';
   status.textContent = 'Fetching page...';
   status.style.color = 'var(--text-muted)';
-
   try {
     const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
     const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     const raw = data.contents || '';
-
     if (!raw || raw.length < 200) throw new Error('Page returned no content — may require login');
-
-    // Strip HTML tags to get readable text
     const tmp = document.createElement('div');
     tmp.innerHTML = raw;
-    // Remove script/style noise
     tmp.querySelectorAll('script,style,nav,header,footer').forEach(el => el.remove());
     let text = (tmp.innerText || tmp.textContent || '').replace(/[ \t]{3,}/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
-
-    // LinkedIn check — login wall
     if (text.toLowerCase().includes('join now') && text.toLowerCase().includes('sign in') && text.length < 500) {
       throw new Error('LinkedIn requires login — paste the JD text manually instead');
     }
-
-    // Trim to reasonable length
     if (text.length > 6000) text = text.slice(0, 6000) + '\n[truncated]';
-
     document.getElementById('jd-input').value = text;
     onJdInput();
     status.textContent = '✓ Fetched ' + text.length + ' chars — review and click Analyze';
@@ -2471,7 +2061,6 @@ async function fetchJdFromUrl() {
     btn.textContent = '🔗 Fetch';
   }
 }
-
 function copyAnalysis() {
   if (!lastAnalysis) return;
   const nl = '\n';
@@ -2483,72 +2072,58 @@ function copyAnalysis() {
     + 'EMPHASIZE:\n' + (lastAnalysis.emphasize||[]).join(nl);
   navigator.clipboard.writeText(text).then(() => showToast('Copied to clipboard', '📋'));
 }
-
 async function runAnalysis() {
   const apiKey = document.getElementById('api-key').value.trim();
   if (!apiKey) { showToast('Enter your API key in Settings first', '⚠️'); toggleSettings(); return; }
-
   const jd = document.getElementById('jd-input').value.trim();
   if (jd.length < 100) return;
-
   const btn = document.getElementById('analyze-btn');
   const btnText = document.getElementById('analyze-btn-text');
   btn.disabled = true;
   btnText.textContent = '⏳ Analyzing...';
-
   const resultEl = document.getElementById('analysis-result');
   resultEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;gap:12px;color:var(--text-muted);"><div class="spinner"></div><span>Analyzing your fit...</span></div>';
   document.getElementById('analysis-actions').style.display = 'none';
-
   const logEl = document.getElementById('agent-log');
   logEl.innerHTML = '';
   logEl.classList.add('visible');
   log('Sending JD to Claude for analysis...', 'info');
-
-  const systemPrompt = `You are a brutal-but-fair job fit analyst for Noy Ilany, an analyst in Herzliya, Israel.
-
-Noy'S PROFILE:
-- 9 years experience: Finance → Cybersecurity (Checkmarx, Mend) → Gaming (BeachBum)
-- Most recent: Data Analyst @ BeachBum Gaming (B2C, 2025, ended in company-wide layoff) — SQL/Redshift, Tableau, A/B testing ('Likely to Convert' segmentation), cohort/LTV dashboards
-- Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS, 2023-2025) — Sisense, MQL funnel, attribution, marketing-to-sales handoff
-- Also: Marketing Analyst @ Mend/WhiteSource (B2B, 2021-2023); Business Analyst & Account Manager, Finance Group (2018-2021); Financial Analyst (2016-2018)
-- 2026 independent projects (self-shipped, currently building): ToyLens (iOS) — AI-powered scoring app using Claude API, Supabase/PostgreSQL schema, PostHog analytics for cohort/funnel/monetization tracking; Hebrew Learning App (iOS) — full-stack kids' education app shipped solo to the App Store, React/Expo, automated audio pipeline, CI/CD, built with Cursor
-- Skills: SQL (strong), Tableau (primary BI), Sisense, Excel, A/B testing, cohort analysis, LTV, funnel analysis
-- Emerging/secondary skills from independent projects: Claude API integration, Supabase/PostgreSQL, PostHog, React/Expo, CI/CD — light/applied, not deep engineering background
-- Python: basic/light — NOT a core skill
-- NO experience with: dbt, Airflow, Spark, data pipelines, data engineering at scale
-- MBA Marketing, Bar-Ilan UNoyersity
-- Currently between roles, actively interviewing for Senior Data Analyst / Senior BI Analyst / Growth Analyst roles
-
+  const systemPrompt = `You are a brutal-but-fair job fit analyst for Noy Ilany, a Senior Product/Data Analyst in Herzliya, Israel.
+NOY'S PROFILE:
+- 7 years experience across finance, business, and product analytics: Credit Risk Analyst @ BDI (2018-2019) → Financial Analyst @ Prodware (2019-2020) → Business Analyst @ Playtika (2021-2024) → Senior Product Analyst @ SciPlay (2024-Present)
+- Current: Senior Product Analyst @ SciPlay (gaming, B2C) — owns the New User flow end-to-end; led A/B-tested economy fixes across two iterations, growing ARPI 16% and lifting D1/D3 retention and FTD conversion; caught a critical bug in an already-shipped, days-live production version (missed by the rest of the team) that triggered a full rollback; takes full independent ownership of assignments, self-researching to become the go-to expert before running dashboards, validation, and cross-department alignment solo
+- Previous: Business Analyst @ Playtika (2021-2024) — analyzed large-scale game datasets for strategic/operational decisions, identified feature/funnel issues to improve KPIs, planned data structures with dev/BI teams, built and maintained automated dashboards
+- Earlier: Financial Analyst @ Prodware (2019-2020) — financial reporting, KPI tracking, forecasting, receivables ownership; Credit Risk Analyst @ BDI (2018-2019)
+- Skills: SQL, Tableau, Excel, Microsoft Office, ChatGPT (LLM-assisted analysis), AI-integrated DWH tool (beta), A/B test design & analysis, economy/monetization analysis, dashboarding
+- MBA, Business Administration — Bar-Ilan University (2019-2021); BA Economics & Business Administration — Ariel University (2016-2018, Dean's honors)
+- Known for catching the fine print and edge cases in A/B test design, data pipelines, and economy models that others miss
 SCORING GUIDE:
-88-100: Strong match — SQL + BI tool + insight-impact language + cohort/LTV/A/B + right industry
-75-87: Good match — SQL + some BI + business stakeholders + analytics-focused
-60-74: Stretch — partial match, one major gap
-Below 60: Do not apply — will likely be rejected
-
+88-100: Strong match — product/business analytics core, SQL + BI/dashboarding + A/B testing + economy/monetization or funnel ownership, gaming or B2C
+75-87: Good match — SQL + analytics-focused role + cross-functional stakeholder work, B2C or B2B2C
+60-74: Stretch — partial match, one major gap (no gaming/B2C exposure, heavier SaaS-subscription or engineering skew)
+Below 60: Do not apply
 RED FLAGS (penalize heavily):
 - dbt, Airflow, Spark, PySpark, Kafka as REQUIRED skills (-25)
-- "build data pipelines" or "data infrastructure" as primary job (-20)
-- Python as MUST with engineering tools (-15)
-- Primary stakeholder is R&D/Engineering, not business (-10)
-- "Big Data" in title with engineering requirements (-15)
+- "build data pipelines" / "data infrastructure" as primary job (-20)
+- Deep engineering/Python-as-must alongside pipeline tools (-15)
+- Primary stakeholder is R&D/Engineering, not business/product/marketing (-10)
+- Pure Financial Analyst / FP&A scope with no product or business analytics (-15)
+- SaaS-subscription-metrics-heavy roles (ARR/NRR/CAC focus) with no B2C/gaming crossover (-10)
 - Pure PM/project coordination with no hands-on analytics (-20)
-- Role clearly needs 7+ years (-15)
-
+- Role needs 10+ years, or is junior/entry-level (-15)
 GREEN FLAGS (score up):
-- SQL + BI tool (Tableau/Looker/Power BI/Sisense/Amplitude) as core
+- SQL + BI/dashboard tool (Tableau/Looker/Power BI) as core
+- A/B testing, experimentation, economy/monetization design, funnel/onboarding ownership
 - "translate data to insights", "actionable insights", "drive decisions"
-- A/B testing, cohort, LTV, retention, funnel mentioned
-- Marketing attribution, incrementality, paid channel analysis
-- Working with marketing/product/growth/GM/leadership (not R&D)
-- B2C, marketplace, gaming, fintech, ad-tech industry
-- Roles that value self-starters who ship end-to-end with AI tooling (Noy independently built and shipped two apps in 2026 using Claude API, Supabase, PostHog)
-
-KNOWN REJECTION REASONS FOR Noy:
-1. "lacks B2C background" — counter: BeachBum IS B2C gaming
-2. "wants someone who can build from scratch" — counter: built Redshift+Tableau stack at BeachBum
-3. "needs more engineering/Python" — this is a real gap, flag it honestly
-
+- Cross-functional partnership with Marketing, Product, Economy/Design teams
+- Gaming, B2C, marketplace, or consumer-subscription industry
+- Roles that reward attention to detail / catching what others miss
+- AI-tool integration into analytics workflows (ChatGPT, Claude, etc.)
+KNOWN CONSIDERATIONS FOR NOY:
+1. Deep finance/FP&A roles are a step backward from her current trajectory — flag as misfit even if technically qualified
+2. No data engineering background — flag pipeline-heavy roles honestly
+3. SaaS-subscription-metrics-first roles (ARR/NRR/CAC) are a vocabulary gap, not a disqualifier — flag as a stretch, not a hard no
+4. Gaming/B2C product analytics is her strongest, most natural fit
 Return ONLY valid JSON, no markdown:
 {
   "score": 82,
@@ -2562,10 +2137,9 @@ Return ONLY valid JSON, no markdown:
   "emphasize": ["what Noy should highlight in application 1", "..."],
   "cluster": "data|business|product|marketing"
 }`;
-
   try {
     const controller = new AbortController();
-    const apiTimeout = setTimeout(() => controller.abort(), 55000); // 55s timeout
+    const apiTimeout = setTimeout(() => controller.abort(), 55000);
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       signal: controller.signal,
@@ -2583,18 +2157,15 @@ Return ONLY valid JSON, no markdown:
       })
     });
     clearTimeout(apiTimeout);
-
     log('API response status: ' + response.status, 'info');
     if (!response.ok) {
       const err = await response.json();
       const errMsg = err.error?.message || JSON.stringify(err).slice(0,200);
       throw new Error('HTTP ' + response.status + ': ' + errMsg);
     }
-
     const data = await response.json();
     let text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
     text = text.replace(/```json|```/g, '').trim();
-
     let result;
     try { result = JSON.parse(text); }
     catch(e) {
@@ -2602,11 +2173,9 @@ Return ONLY valid JSON, no markdown:
       if (m) result = JSON.parse(m[0]);
       else throw new Error('Could not parse analysis response');
     }
-
     lastAnalysis = result;
     log('Analysis complete — score: ' + result.score + '/100', 'success');
     renderAnalysisResult(result);
-
   } catch(e) {
     const msg = e.name === 'AbortError' ? 'Request timed out (55s) — try again' : e.message;
     log('Error: ' + msg, 'error');
@@ -2617,16 +2186,13 @@ Return ONLY valid JSON, no markdown:
     btnText.textContent = '⚡ Analyze Fit';
   }
 }
-
 function renderAnalysisResult(r) {
   const scoreColor = r.score >= 80 ? '#1a7a4a' : r.score >= 65 ? '#b07800' : '#cc2222';
   const scoreBg = r.score >= 80 ? '#e6f9f0' : r.score >= 65 ? '#fff8e6' : '#fef0f0';
   const verdictColor = r.verdict.includes('✅') ? '#1a7a4a' : r.verdict.includes('⚠️') ? '#b07800' : '#cc2222';
-
   const listHtml = (items, color) => items.length
     ? items.map(i => `<div style="display:flex;gap:8px;margin-bottom:5px;"><span style="color:${color};flex-shrink:0;">•</span><span>${i}</span></div>`).join('')
     : '<div style="color:var(--text-dim);font-style:italic;">None</div>';
-
   document.getElementById('analysis-result').innerHTML = `
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
       <div style="background:${scoreBg};color:${scoreColor};font-size:26px;font-weight:700;font-family:'JetBrains Mono',monospace;padding:8px 14px;border-radius:10px;line-height:1;">${r.score}</div>
@@ -2653,11 +2219,9 @@ function renderAnalysisResult(r) {
       <div style="font-size:12px;color:var(--text);">${listHtml(r.emphasize || [], 'var(--accent)')}</div>
     </div>
   `;
-
   const actions = document.getElementById('analysis-actions');
   actions.style.display = 'flex';
 }
-
 function addAnalyzedJobToTracker() {
   if (!lastAnalysis) return;
   openAddModal();
@@ -2666,17 +2230,13 @@ function addAnalyzedJobToTracker() {
     document.getElementById('f-company').value = lastAnalysis.company;
     onCompanyInput(lastAnalysis.company);
   }
-  // Pre-fill URL from the fetch field if one was used
   const fetchedUrl = document.getElementById('jd-url') ? document.getElementById('jd-url').value.trim() : '';
   if (fetchedUrl) document.getElementById('f-url').value = fetchedUrl;
-
   const notes = lastAnalysis.verdict + ' (Score: ' + lastAnalysis.score + '/100) — ' + lastAnalysis.summary;
   document.getElementById('f-status').value = notes;
-  // Store fit score so saveJob can pick it up
   document._pendingFitScore = lastAnalysis.score;
   const now = new Date();
   document.getElementById('f-month').value = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
-  // Focus URL field so user can paste/confirm it
   setTimeout(() => {
     const urlField = document.getElementById('f-url');
     urlField.focus();
@@ -2684,451 +2244,21 @@ function addAnalyzedJobToTracker() {
   }, 150);
   showToast('Job pre-filled — add the URL and save', '🎯');
 }
-
-function buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded) {
-  return `You are a precision job search agent for Noy Ilany, an analyst in Herzliya, Israel.
-
-=== Noy'S PROFILE ===
-- 9 years experience: Finance, Cybersecurity (Checkmarx, Mend), Gaming (BeachBum)
-- Most recent: Data Analyst @ BeachBum Gaming (B2C, 2025, role ended in a company-wide layoff) — SQL/Redshift, Tableau, A/B testing, cohort/LTV dashboards
-- Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS) — Sisense, MQL funnel, attribution, budget
-- 2026 independent projects: ToyLens (iOS, AI scoring app — Claude API, Supabase/PostgreSQL, PostHog analytics) and a Hebrew Learning App (iOS, full-stack, React/Expo, CI/CD) shipped solo to the App Store — demonstrates end-to-end ownership and AI-tooling fluency
-- Skills: SQL, Tableau, Sisense, Excel, A/B testing, cohort analysis, KPI dev, LTV, funnel analysis
-- Location: Herzliya — open to Tel Aviv metro + Remote from Israel
-- Preference: B2C, B2B2C, marketplaces, ad-tech, fintech, gaming. Strong B2B track record too.
-- Currently between roles, actively interviewing
-- MBA Marketing, Bar-Ilan.
-
-=== PREVIOUSLY INTERVIEWED — SKIP THESE ===
-Do not return jobs from: \${uniqueExcluded.length > 0 ? uniqueExcluded.slice(0,10).join(', ') : 'none'}
-This is critical — returning a tracked company wastes a search result and costs money.
-
-=== SEARCH BY JOB DESCRIPTION — NOT TITLE ===
-Do NOT anchor on job titles. Search for roles whose DESCRIPTION matches Noy's responsibilities.
-
-CORE RESPONSIBILITIES TO FIND (any 3+ = strong match):
-- Building and owning dashboards, KPI reporting, business intelligence
-- SQL for data extraction, ad hoc analysis, self-serve analytics
-- A/B testing, experimentation, statistical analysis
-- Cohort analysis, retention, LTV, funnel analysis
-- Marketing attribution, incrementality measurement, paid channel efficiency, media mix
-- Product analytics, user behavior, feature impact, monetization
-- "Single source of truth", "cockpit", operational dashboards for GM/leadership
-- Revenue analysis, pricing analysis, growth analytics, GTM analytics
-- CRM analytics, customer segmentation, lifecycle analysis
-
-INSIGHT-TO-IMPACT LANGUAGE — strong positive signal (find roles using this language):
-"translate data into actionable insights", "drive business decisions", "identify growth opportunities",
-"partner with stakeholders", "proactively surface insights", "data storytelling",
-"influence strategy with data", "don't just report — make the news",
-"challenge assumptions with data", "single source of truth", "cockpit for the business",
-"prescribe solutions", "end-to-end ownership", "shape strategy"
-
-BI TOOLS — any of these = good signal:
-Tableau, Sisense, Looker, Power BI, Qlik, Metabase, Amplitude, Mixpanel,
-Redash, Google Data Studio, Mode, Grafana, Superset, Databricks (for BI), Domo
-
-INDUSTRIES (prioritize in this order):
-1. Digital marketplaces / classifieds (Yad2, Fiverr, Booking type) — HIGHEST PRIORITY
-2. Ad-tech / marketing measurement (AppsFlyer, INCRMNTAL, Taboola, IronSource type)
-3. Mobile/casual gaming (Playtika, Moon Active, Candivore type)
-4. Fintech / payments / insurtech (Melio, eToro, Lemonade, Payoneer type)
-5. B2C SaaS / consumer apps (Wolt, MyHeritage, Wix, Elementor type)
-6. E-commerce / DTC (Edikted, MAËLYS, Global-e type)
-7. Cybersecurity / enterprise SaaS (Checkmarx, Cato, Akamai type)
-
-VALID TITLE PATTERNS — wide net, description rules over title:
-"Data Analyst", "Senior Data Analyst", "Senior Business Analyst", "Business Analyst",
-"Marketing Analyst", "Senior Marketing Analyst", "Marketing Science",
-"Growth Analyst", "Revenue Analyst", "Revenue Strategy Analyst",
-"Insights Analyst", "Strategic Analyst", "Strategic Product Analyst",
-"BI Analyst", "Performance Analyst", "CRM Analyst", "Commercial Analyst",
-"GTM Analyst", "Business Strategy Analyst", "Customer Success Data Analyst",
-"Monetization Analyst", "Attribution Analyst", "Marketing Measurement Analyst",
-"Paid Media Analyst", "Customer Analytics", "Acquisition Analyst"
-
-=== LIKED JOBS (find more like these) ===
-\${likedTitles}
-
-=== DISMISSED (avoid these types) ===
-\${dismissedTitles}
-
-=== HARD DISQUALIFIERS — skip immediately if ANY appear as REQUIRED/MUST ===
-These roles will reject Noy for lacking engineering background:
-- dbt, Airflow, Spark, PySpark, Kafka — listed as MUST
-- "build data pipelines", "data infrastructure ownership", "data modeling" as primary job
-- AWS/GCP/Azure infrastructure building as core requirement
-- Python as MUST alongside pipeline/engineering tools
-- Primary stakeholder is R&D/Engineering (not business/marketing/product)
-- Titles: "Data Engineer", "Analytics Engineer", "Big Data Engineer", "Big Data Analyst"
-- "Customer Success" roles where analytics is secondary to account management
-- Pure project management / PM coordination with no hands-on analytics
-- Pure finance analyst (P&L, FP&A) with no business/product analytics
-NOTE: Python as a bonus/advantage is fine. SQL + Python (no engineering tools) is fine.
-
-=== FRESHNESS — CRITICAL ===
-Only return jobs posted in the last 30 days. Accept up to 45 days max for a strong match.
-- REJECT: anything showing "X months ago", "X years ago", or "reposted X years ago"
-- REJECT: jobs showing "No longer accepting applications"
-- REJECT: jobs with 0 applicants AND reposted (ghost listing)
-- LinkedIn: always use f_TPR=r2592000 (30-day filter) in search URLs
-- Always include postedDate — "today", "X days ago", "X weeks ago". If you cannot determine date, skip the job.
-
-=== SEARCH STRATEGY — 2 LinkedIn searches only ===
-Run exactly 2 searches. Keep results concise.
-
-SEARCH 1:
-site:linkedin.com/jobs ("business analyst" OR "senior business analyst" OR "marketing analyst" OR "marketing science" OR "growth analyst" OR "revenue analyst") SQL Israel
-
-SEARCH 2:
-site:linkedin.com/jobs ("data analyst" OR "insights analyst" OR "attribution analyst" OR "CRM analyst") (Tableau OR Looker OR "Power BI" OR Sisense OR Amplitude) Israel
-
-=== ANTI-HALLUCINATION RULES — ABSOLUTE ===
-NEVER invent job listings. Every result must come from an actual search result.
-FORBIDDEN:
-- Generic company names ("Israeli Tech Company", "Multiple Companies", "Leading SaaS")
-- Search-page URLs — linkedin.com/jobs/search/... is FORBIDDEN
-- Any LinkedIn URL without /jobs/view/ and a numeric ID
-- Recruitment agency listed as the employer
-
-VALID LinkedIn URL format ONLY:
-  ✓ linkedin.com/jobs/view/senior-business-analyst-yad2-4375521524
-  ✗ linkedin.com/jobs/search/?keywords=analyst (FORBIDDEN)
-  ✗ linkedin.com/jobs/data-analyst-jobs (FORBIDDEN)
-
-Return what you actually found. 3 real jobs is fine. DO NOT return an empty array [] — if you found jobs, include them even if you cannot verify every detail. Only omit if the URL is clearly a search page.
-
-=== SCORING ===
-88-95: SQL + BI tool + insight-impact language + cohort/LTV/A/B/attribution/incrementality + B2C or marketplace or ad-tech
-78-87: SQL + BI tool + insight language + business team partnership + fintech/B2B SaaS
-65-77: SQL + some insight language, narrower scope or mild domain stretch
-Below 65: do not return
-
-BONUS +3 each: "actionable insights", "drive decisions", "single source of truth",
-  "cockpit", "influence strategy", "incrementality", "paid channel efficiency",
-  "prescribe solutions", "proactively identify", "end-to-end ownership"
-PENALTY -10: dbt/Airflow/Spark/pySpark as required; Python+engineering as core; "build infrastructure" primary
-PENALTY -5: primary stakeholder is R&D not business; customer success heavier than analytics
-
-matchReason must include: (1) tools matched, (2) responsibilities matched,
-(3) insight/impact language found, (4) industry fit, (5) any red flags or penalties applied
-
-Return ONLY valid JSON array, no markdown, no explanation:
-[{"id":"unique-id","title":"","company":"","location":"","remote":false,"salary":null,"url":"MUST_BE_REAL_LINKEDIN_VIEW_URL","linkedinCompany":"","source":"linkedin","matchScore":85,"matchReason":"","cluster":"data","postedDate":""}]
-
-cluster must be one of: data, business, product, marketing`;
-}
-
-function previewPrompt() {
-  const clusterNames = [...activeClusters].map(c=>({data:'Data Analyst',business:'Business Analyst',product:'Product Analyst',marketing:'Marketing Analyst / Marketing Operations'}[c])).join(', ');
-  const likedTitles = finderJobs.filter(j=>finderFeedback[j.id]==='liked').map(j=>j.title).join(', ')||'none yet';
-  const dismissedTitles = finderJobs.filter(j=>finderFeedback[j.id]==='dismissed').map(j=>j.title).join(', ')||'none yet';
-  const threshold = parseInt(document.getElementById('threshold').value);
-
-  // Exclude companies where Noy has already interviewed (not just applied)
-  const interviewedCompanies = jobs
-    .filter(j => j.interviewed)
-    .map(j => (j.company||'').toLowerCase().trim())
-    .filter(Boolean);
-  const uniqueExcluded = [...new Set(interviewedCompanies)];
-
-  // Build the same system prompt as runSearch so what you see is exactly what gets sent
-  const systemPrompt = buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded);
-  const userMsg = 'Search LinkedIn for analyst job openings in Israel posted in the last 30 days. Run exactly 3 LinkedIn searches. Return 5-8 high-quality results as a JSON array only. Exclude any company already in my tracker list.';
-
-  if (document.getElementById('preview-system')) document.getElementById('preview-system').textContent = systemPrompt;
-  if (document.getElementById('preview-user')) document.getElementById('preview-user').textContent = userMsg;
-  document.getElementById('prev-maxtokens').textContent = '1,500';
-  if (document.getElementById('preview-excluded')) document.getElementById('preview-excluded').textContent = uniqueExcluded.length > 0
-    ? uniqueExcluded.length + ' interviewed companies excluded — e.g. ' + uniqueExcluded.slice(0,8).join(', ') + (uniqueExcluded.length > 8 ? ' +' + (uniqueExcluded.length-8) + ' more' : '')
-    : '(none)';
-  if (document.getElementById('preview-filters')) document.getElementById('preview-filters').textContent = [
-    '✓  Clusters: ' + clusterNames,
-    '✓  Source: LinkedIn ONLY (3 searches)',
-    '✓  Freshness: posted in last 30 days (up to 45 days for strong match)',
-    '✓  Excluded: ' + uniqueExcluded.length + ' previously-interviewed companies',
-    '✓  Excluded: student / intern / junior / entry-level',
-    '✓  Excluded: data engineering disguised as analyst (dbt/Airflow/PySpark required)',
-    '✓  Excluded: 7+ years experience requirements',
-    '✓  Telegram alert threshold: ' + threshold + '%',
-    '✓  Liked jobs (boosted): ' + likedTitles,
-    '✓  Dismissed jobs (downweighted): ' + dismissedTitles,
-  ].join('\n');
-
-  if (document.getElementById('preview-overlay')) document.getElementById('preview-overlay').classList.remove('hidden');
-}
-
-async function runSearch() {
-  const apiKey = document.getElementById('api-key').value.trim();
-  if (!apiKey) { showToast('Enter your API key in Settings first','⚠️'); toggleSettings(); return; }
-  if (isSearching) return;
-  isSearching = true;
-  if (document.getElementById('search-btn')) document.getElementById('search-btn').disabled = true;
-  document.getElementById('results-area').innerHTML = `<div class="loading-state"><div class="spinner"></div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;">Agent is searching...</div><div class="loading-text">Scanning top Israeli job boards for this week's listings…</div></div>`;
-  document.getElementById('agent-log').innerHTML = '';
-
-  const clusterNames = [...activeClusters].map(c=>({data:'Data Analyst',business:'Business Analyst',product:'Product Analyst',marketing:'Marketing Analyst / Marketing Operations'}[c])).join(', ');
-  const likedTitles = finderJobs.filter(j=>finderFeedback[j.id]==='liked').map(j=>j.title).join(', ')||'none yet';
-  const dismissedTitles = finderJobs.filter(j=>finderFeedback[j.id]==='dismissed').map(j=>j.title).join(', ')||'none yet';
-  const threshold = parseInt(document.getElementById('threshold').value);
-
-  // Exclude companies where Noy has already interviewed — applying again elsewhere is fine
-  const interviewedCompanies = jobs
-    .filter(j => j.interviewed)
-    .map(j => (j.company||'').toLowerCase().trim())
-    .filter(Boolean);
-  const uniqueExcluded = [...new Set(interviewedCompanies)];
-
-  log('Starting agent...','info');
-  log(`Clusters: ${clusterNames}`,'info');
-  log(`Excluding ${uniqueExcluded.length} previously-interviewed companies from results`,'info');
-
-  const systemPrompt = buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded);
-
-  try {
-    log('Calling Claude API (LinkedIn only, 3 searches, 30-day window)...','info');
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST',
-      headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body: JSON.stringify({
-        model:'claude-sonnet-4-6',
-        max_tokens:1500,
-        tools:[{type:'web_search_20250305',name:'web_search'}],
-        system:systemPrompt,
-        messages:[{role:'user',content:'Search LinkedIn for analyst job openings in Israel from the last 30 days. Run all 3 searches. Return 5-8 jobs as a JSON array. SKIP any job showing No longer accepting applications, or posted/reposted more than 45 days ago. Return all real jobs you found — do not return an empty array.'}]
-      })
-    });
-    if (!response.ok) { const err=await response.json(); throw new Error(err.error?.message||'API error'); }
-    const data = await response.json();
-    log('Agent responded','success');
-    let text = ''; for (const block of data.content) { if (block.type==='text') text+=block.text; }
-
-    // Log which searches were performed
-    const searchBlocks = data.content.filter(b => b.type === 'tool_use' && b.name === 'web_search');
-    searchBlocks.forEach((s,i) => log('Search ' + (i+1) + ': ' + (s.input && s.input.query ? s.input.query : '?'), 'info'));
-
-    // Log raw text if no JSON found — helps debug empty results
-    if (!text.trim()) {
-      log('Warning: Agent returned no text at all','warn');
-    } else if (!text.includes('[')) {
-      log('Warning — no JSON in response: ' + text.slice(0, 400), 'warn');
-    }
-
-    let parsed = [];
-    try { const m=text.match(/\[[\s\S]*\]/); if(m) parsed=JSON.parse(m[0]); }
-    catch(e) { try { parsed=JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e2) { throw new Error('Could not parse job listings'); } }
-    if (!Array.isArray(parsed)||parsed.length===0) {
-      if (text.trim()) log('Raw response: ' + text.slice(0, 600), 'warn');
-      // Retry once with a simpler, more permissive message
-      log('Empty result — retrying with relaxed prompt...', 'warn');
-      const retry = await fetch('https://api.anthropic.com/v1/messages', {
-        method:'POST',
-        headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-        body: JSON.stringify({
-          model:'claude-sonnet-4-6',
-          max_tokens:1500,
-          tools:[{type:'web_search_20250305',name:'web_search'}],
-          system: systemPrompt,
-          messages:[{role:'user',content:'Search LinkedIn for data analyst or business analyst jobs in Israel from the last 30 days. Return whatever real jobs you find as a JSON array. Include jobs even if you are not 100% certain — I will verify them myself. Return at least 3-5 results.'}]
-        })
-      });
-      const retryData = await retry.json();
-      let retryText = '';
-      if (retryData && Array.isArray(retryData.content)) {
-        for (const b of retryData.content) { if (b.type==='text') retryText+=b.text; }
-      } else {
-        throw new Error('Retry API call failed: ' + JSON.stringify(retryData).slice(0,200));
-      }
-      log('Retry raw: ' + retryText.slice(0,300), 'info');
-      try { const m=retryText.match(/\[[\s\S]*\]/); if(m) parsed=JSON.parse(m[0]); }
-      catch(e2) {}
-      if (!Array.isArray(parsed)||parsed.length===0) throw new Error('Agent returned no listings after retry');
-    }
-
-    // ── Client-side quality filter ──
-    const beforeFilter = parsed.length;
-    const rejectionLog = [];
-    parsed = parsed.filter(j => {
-      const titleLower = (j.title||'').toLowerCase();
-      const companyLower = (j.company||'').toLowerCase().trim();
-      const url = j.url||'';
-
-      // Remove student/intern/junior roles (keep academy — may be valid training/analyst programs)
-      if (/student|intern|junior|entry.level|graduate/.test(titleLower)) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — student/intern/junior role`); return false;
-      }
-      // Remove if no URL or not http
-      if (!url.startsWith('http')) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — missing URL`); return false;
-      }
-      // LinkedIn URLs must be direct job listing pages: /jobs/view/job-title-NUMERID
-      if (url.includes('linkedin.com')) {
-        const hasViewPath = /\/jobs\/view\//i.test(url);
-        const hasJobId = /[0-9]{7,}/.test(url);
-        if (!hasViewPath || !hasJobId) {
-          rejectionLog.push(`"${j.title}" @ ${j.company} — LinkedIn URL is not a direct job listing (need /jobs/view/title-XXXXXXX): ${url}`); return false;
-        }
-      }
-      // Drushim/AllJobs must not be a search page
-      if ((url.includes('drushim.co.il') || url.includes('alljobs.co.il')) && /\/search\/|\/jobs\/cat/.test(url)) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — search-page URL: ${url}`); return false;
-      }
-      // Other generic search-page patterns
-      if (/\/(jobs\/[a-z-]+-jobs|jobs\/search)/i.test(url)) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — generic search URL: ${url}`); return false;
-      }
-      // Remove placeholder/fake company names
-      const fakeCo = /israeli (tech|cyber|consumer|startup|company)|multiple companies|unknown company|placeholder|various companies/i.test(j.company||'');
-      if (fakeCo) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — fake/placeholder company name`); return false;
-      }
-      // Remove recruitment agency as company (when company contains "recruitment", "staffing", "hr services")
-      if (/(recruitment|staffing|hr services|headhunt)/i.test(j.company||'')) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — recruitment agency listed as company`); return false;
-      }
-      // Remove if company is in recently-interviewed excluded list
-      if (uniqueExcluded.some(ex => companyLower.includes(ex) || ex.includes(companyLower))) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — recently interviewed here`); return false;
-      }
-      // Remove stale jobs
-      const pd = (j.postedDate||'').toLowerCase();
-      if (/\d+\s*weeks? ago|\d+\s*months? ago|30 days|[2-9]\d days ago|[1-9]\d+ days ago/.test(pd)) {
-        rejectionLog.push(`"${j.title}" @ ${j.company} — too old: ${j.postedDate}`); return false;
-      }
-      return true;
-    });
-    if (rejectionLog.length > 0) {
-      rejectionLog.forEach(r => log(`🚫 Filtered: ${r}`, 'warn'));
-    }
-    log(`Quality filter: ${beforeFilter} → ${parsed.length} jobs kept, ${rejectionLog.length} removed`,'info');
-
-    log(`Found ${parsed.length} listings — validating URLs...`,'info');
-    const existingIds = new Set(finderJobs.map(j=>j.id));
-    const existingKeys = new Set(finderJobs.map(j=>(j.company+j.title).toLowerCase().replace(/\s/g,'')));
-    const dedupedJobs = parsed.filter(j => {
-      if (existingIds.has(j.id)) return false;
-      const key = (j.company+j.title).toLowerCase().replace(/\s/g,'');
-      if (existingKeys.has(key)) return false;
-      return true;
-    });
-
-    // ── URL validation: check each link is alive + not closed ──
-    const validatedJobs = [];
-    for (const job of dedupedJobs) {
-      const result = await validateJobUrl(job.url, job.company);
-      if (result.ok) {
-        validatedJobs.push(job);
-        log(`✓ Valid: ${job.company} — ${job.title}`, 'success');
-      } else {
-        log(`🚫 URL invalid: ${job.company} — ${job.title} (${result.reason})`, 'warn');
-      }
-    }
-
-    const newJobs = validatedJobs;
-    finderJobs = [...newJobs, ...finderJobs];
-    saveFinderState();
-    scheduleGhSync();
-    const highMatches = newJobs.filter(j=>(j.matchScore||0)>=threshold);
-    if (highMatches.length>0) { log(`Sending ${highMatches.length} Telegram alert(s)...`,'info'); for (const job of highMatches) { await sendTelegramAlert(job); await new Promise(r=>setTimeout(r,600)); } }
-    log(`Done — ${newJobs.length} verified jobs added (${dedupedJobs.length - newJobs.length} removed by URL check)`,'success');
-    renderFinderJobs();
-    showToast(`${newJobs.length} verified jobs added!`,'✅');
-    updateNavStats();
-  } catch(err) {
-    log(`Error: ${err.message}`,'warn');
-    document.getElementById('results-area').innerHTML = `<div class="empty-state-f"><div class="empty-icon">⚠️</div><h3>Search failed</h3><p style="color:var(--accent2)">${esc(err.message)}</p></div>`;
-  } finally { isSearching=false; if (document.getElementById('search-btn')) document.getElementById('search-btn').disabled=false; }
-}
-
-async function giveFeedback(id, type) {
-  const prev = finderFeedback[id];
-  if (prev===type) delete finderFeedback[id]; else finderFeedback[id]=type;
-  saveFinderState();
-  scheduleGhSync();
-  renderFinderJobs(); updateNavStats();
-}
-
-function renderFinderJobs() {
-  // Finder tab replaced by analyzer — nothing to render
-  if (!document.getElementById('results-area')) return;
-  const area = document.getElementById('results-area');
-  let filtered = finderJobs;
-  if (activeFilter==='liked') filtered = finderJobs.filter(j=>finderFeedback[j.id]==='liked');
-  if (activeFilter==='new') filtered = finderJobs.filter(j=>!finderFeedback[j.id]);
-  if (activeFilter==='b2c') filtered = finderJobs.filter(j=>detectB2C(j));
-  const rcEl = document.getElementById('results-count'); if (rcEl) rcEl.textContent = `${filtered.length} position${filtered.length!==1?'s':''}`;
-  if (!filtered.length && !finderJobs.length) {
-    area.innerHTML = `<div class="empty-state-f"><div class="empty-icon">🔍</div><h3>Ready to search</h3><p>Configure Settings then click Find New Jobs</p></div>`;
-    return;
-  }
-  if (!filtered.length) { area.innerHTML = `<div class="empty-state-f"><div class="empty-icon">🫙</div><h3>No results</h3><p>Try a different filter</p></div>`; return; }
-  const CC={data:'#4f6ef7',business:'#2aaa7a',product:'#e05b6a',marketing:'#d4900a'};
-  const CL={data:'Data Analyst',business:'Business Analyst',product:'Product Analyst',marketing:'Marketing'};
-  area.innerHTML = `<div class="jobs-grid">${filtered.map((job,i)=>{
-    const fb=finderFeedback[job.id]||'';
-    const score=job.matchScore||70;
-    const sc=score>=80?'#2aaa7a':score>=60?'#4f6ef7':'#e8a020';
-    const ac=CC[job.cluster]||'#4f6ef7';
-    const isB2C=detectB2C(job);
-    const liUrl=job.linkedinCompany||buildLinkedIn(job.company);
-    return `<div class="job-card ${fb}" id="fcard-${job.id}" style="animation-delay:${Math.min(i*40,280)}ms">
-      <div class="card-stripe" style="background:${ac}"></div>
-      <div class="card-top">
-        <div style="flex:1">
-          <div class="badge-row">
-            <div class="job-title-f">${esc(job.title)}</div>
-            <span class="b2x-badge ${isB2C?'b2c':'b2b'}">${isB2C?'B2C':'B2B'}</span>
-          </div>
-          <div class="job-company-f">${esc(job.company)} · <span style="color:var(--text-dim);font-size:11px">${esc(job.source||'Job board')}</span></div>
-        </div>
-        <div class="match-box">
-          <div class="score-track"><div class="score-fill" style="width:${score}%;background:${sc}"></div></div>
-          <span class="score-num" style="color:${sc}">${score}%</span>
-        </div>
-      </div>
-      <div class="meta-row">
-        <span class="meta-chip">📍 ${esc(job.location||'Israel')}</span>
-        ${job.remote?'<span class="meta-chip">🌐 Remote</span>':''}
-        ${job.salary?`<span class="meta-chip">💰 ${esc(job.salary)}</span>`:''}
-        ${job.postedDate?`<span class="meta-chip">🕐 ${esc(job.postedDate)}</span>`:''}
-        <span class="meta-chip" style="color:${ac};border-color:${ac}33;background:${ac}0d">${CL[job.cluster]||job.cluster}</span>
-      </div>
-      ${job.matchReason?`<div class="match-reason">${esc(job.matchReason)}</div>`:''}
-      <div class="card-actions">
-        <button class="act-btn like ${fb==='liked'?'active':''}" onclick="giveFeedback('${job.id}','liked')">👍 Save</button>
-        <button class="act-btn dismiss ${fb==='dismissed'?'active':''}" onclick="giveFeedback('${job.id}','dismissed')">👎 Skip</button>
-        ${job.url?`<a class="act-btn ext" href="${esc(job.url)}" target="_blank" rel="noopener">🔗 View listing</a>`:''}
-        <a class="act-btn ext" href="${esc(liUrl)}" target="_blank" rel="noopener">👥 Find employees</a>
-      </div>
-    </div>`;
-  }).join('')}</div>`;
-}
-
-// ─────────────────────────────────────────────────────────────
-//  INIT — async, fetches data.json first
-// ─────────────────────────────────────────────────────────────
 async function initApp() {
-  // Show loading state — guard in case DOM element doesn't exist yet
   const tbodyEl = document.getElementById('tracker-body');
   if (tbodyEl) tbodyEl.innerHTML =
     '<tr><td colspan="99" style="text-align:center;padding:40px;color:var(--text-muted)">⏳ Loading your data...</td></tr>';
-
   try {
-    const res = await fetch(DATA_URL + '?v=' + Date.now()); // cache-bust
+    const res = await fetch(DATA_URL + '?v=' + Date.now());
     if (!res.ok) throw new Error('data.json not found (HTTP ' + res.status + ')');
     const remote = await res.json();
-
-    // localStorage always wins — your edits survive app updates
     const lsJobs = localStorage.getItem(LS_JOBS);
     if (lsJobs) {
       jobs = JSON.parse(lsJobs);
     } else if (remote.trackerJobs) {
-      // First ever load from data.json — seed localStorage
       jobs = remote.trackerJobs;
       saveJobs();
     }
-
-    // Restore finder state
     const lsFinder = localStorage.getItem(LS_FINDER);
     if (lsFinder) {
       const f = JSON.parse(lsFinder);
@@ -3138,14 +2268,10 @@ async function initApp() {
       finderJobs = remote.finderJobs;
       finderFeedback = remote.finderFeedback || {};
     }
-
-    // Restore settings (localStorage wins, fall back to data.json)
     if (!localStorage.getItem(LS_SETTINGS) && remote.settings) {
       localStorage.setItem(LS_SETTINGS, JSON.stringify(remote.settings));
     }
-
   } catch(err) {
-    // Fallback: try localStorage, otherwise show setup instructions
     const lsJobs = localStorage.getItem(LS_JOBS);
     if (lsJobs) {
       jobs = JSON.parse(lsJobs);
@@ -3165,22 +2291,18 @@ async function initApp() {
       return;
     }
   }
-
   loadSettings();
   populateMonthFilter();
   try { renderTracker(); } catch(e) { console.error('renderTracker failed:', e); }
   try { renderFinderJobs(); } catch(e) { console.error('renderFinderJobs failed:', e); }
   try { updateNavStats(); } catch(e) { console.error('updateNavStats failed:', e); }
   try { renderSearchAnalysis(); } catch(e) { console.error('renderSearchAnalysis failed:', e); }
-  checkHashSettings(); // auto-import settings from QR hash if present
-  ghAppReady = true; // MUST always be reached — wrap above in try/catch
+  checkHashSettings();
+  ghAppReady = true;
   console.log('App ready — ghAppReady=true, jobs:', jobs.length);
 }
-
 document.addEventListener('DOMContentLoaded', initApp);
 </script>
-
-<!-- ══ AIAPPLY IMPORT MODAL ══════════════════════════════ -->
 <div class="modal-overlay hidden" id="aiapply-modal" onclick="if(event.target===this)closeAiApplyModal()">
   <div class="modal" style="max-width:560px;">
     <div class="modal-title">📥 Import from AIApply</div>
