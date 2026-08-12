@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-12T11:11:33.220Z",
+    "lastUpdated": "2026-08-12T11:12:49.337Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -40,14 +40,14 @@
       "url": "https://www.linkedin.com/jobs/view/4417228347/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 74/100) — undefined",
-      "interviewNotes": "שלחתי הודעה לשקד מוסרי שעובדת שם",
+      "interviewNotes": "היא הגישה אותי\nשלחתי הודעה לשקד מוסרי שעובדת שם",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 74,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
