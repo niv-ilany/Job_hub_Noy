@@ -667,11 +667,7 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
 //  localStorage = your live edits, always wins over data.json on load
 //  index.html = app only, I (Claude) update this freely without touching data.json
 // ─────────────────────────────────────────────────────────────
-// ⚠️ TODO: confirm the real GitHub username + repo name, then fix this line.
-// It currently points at a repo that almost certainly doesn't exist, which
-// means data.json silently fails to load on every visit and the app falls
-// back to localStorage only.
-const DATA_URL = 'https://raw.githubusercontent.com/Noy-ilany/Job_hub/main/data.json';
+const DATA_URL = 'https://raw.githubusercontent.com/niv-ilany/Job_hub_Noy/main/data.json';
 const LS_JOBS     = 'Noy_jobs_v4';
 const LS_FINDER   = 'Noy_finder_v1';
 const LS_SETTINGS = 'Noy_settings';
