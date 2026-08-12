@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-12T06:31:08.125Z",
+    "lastUpdated": "2026-08-12T06:35:50.585Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -169,13 +169,13 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-11",
+      "lastUpdate": "2026-08-12",
       "company": "Bookmap",
       "title": "Senior Business Operations & Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4436334826/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 72/100) — Noy meets the core analytics profile well — SQL, BI dashboards, cross-functional stakeholder work, executive storytelling, and 7+ years of experience — but this role leans heavily into SaaS subscription metrics (ARR, NRR, CAC, Churn) that are outside her primary vocabulary, and expects data infrastructure/governance ownership that edges toward BI lead territory. The fintech/trading angle is a genuine differentiator given her BDI credit risk background, but the SaaS-first framing and expectation of team leadership experience are real gaps to address.",
-      "interviewNotes": "",
+      "interviewNotes": "הוספתי 3 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
