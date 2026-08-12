@@ -482,7 +482,7 @@ pre { white-space: pre-wrap; word-break: break-all; }
 Include: title, company, responsibilities, requirements.
 The more text the better." style="width:100%;height:280px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:13px;font-family:'Inter',sans-serif;color:var(--text);resize:vertical;line-height:1.6;transition:border-color 0.2s;" oninput="onJdInput()" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;">
-          <span id="jd-char-count" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">0 chars</span>
+          <span id="jd-char-count" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">0 / 15,000 chars</span>
           <button class="search-btn" id="analyze-btn" onclick="runAnalysis()" disabled style="padding:10px 24px;">
             <span id="analyze-btn-text">⚡ Analyze Fit</span>
           </button>
@@ -563,6 +563,7 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
           <th>Tests</th>
           <th onclick="tSortBy('fitScore')" data-col="fitScore" title="Analyzer fit score">Fit ↕</th>
           <th>Notes</th>
+          <th>Interview Notes</th>
           <th></th>
         </tr>
       </thead>
@@ -674,6 +675,7 @@ const DATA_URL = 'https://raw.githubusercontent.com/Noy-ilany/Job_hub/main/data.
 const LS_JOBS     = 'Noy_jobs_v4';
 const LS_FINDER   = 'Noy_finder_v1';
 const LS_SETTINGS = 'Noy_settings';
+const JD_MAX_CHARS = 15000;
 function saveJobs() { try { localStorage.setItem(LS_JOBS, JSON.stringify(jobs)); } catch(e){} }
 function saveFinderState() {
   try { localStorage.setItem(LS_FINDER, JSON.stringify({ finderJobs, finderFeedback })); } catch(e){}
@@ -861,6 +863,7 @@ function renderTracker() {
     const method = [j.viaEmployee&&'👤', j.viaLinkedin&&'💼'].filter(Boolean).join(' ') || '–';
     const numInt = j.numInterviews != null ? j.numInterviews : (j.interviewed ? '1+' : '–');
     const noteTxt = (j.status||j.interviewNotes||j.applicationMethod||'').substring(0,70);
+    const intNoteTxt = (j.interviewNotes||'').substring(0,70);
     return `<tr${isUpcomingInterview(j) ? ' class="t-row-upcoming"' : ''}>
       <td style="color:var(--text-dim);white-space:nowrap;font-size:11px;font-family:'JetBrains Mono',monospace">${esc(j.month||'–')}</td>
       <td><div class="t-company">${esc(j.company||'–')}</div>${urlHtml}</td>
@@ -874,6 +877,7 @@ function renderTracker() {
       <td style="font-size:10px;color:var(--text-dim)">${esc(tests)||'–'}</td>
       <td style="text-align:center;">${j.fitScore != null ? `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;background:${j.fitScore>=80?'#e6f9f0':j.fitScore>=65?'#fff8e6':'#fef0f0'};color:${j.fitScore>=80?'#1a7a4a':j.fitScore>=65?'#b07800':'#cc2222'};">${j.fitScore}</span>` : '<span style="color:var(--text-dim);font-size:11px">–</span>'}</td>
       <td class="t-notes" title="${esc(j.status||'')} ${esc(j.interviewNotes||'')}">${esc(noteTxt)}${noteTxt.length>=70?'…':''}</td>
+      <td class="t-notes" title="${esc(j.interviewNotes||'')}">${esc(intNoteTxt)}${intNoteTxt.length>=70?'…':''}</td>
       <td>
         <div style="display:flex;gap:5px">
           <button class="t-icon-btn" onclick="openDetail('${j.id}')" title="Details">👁</button>
@@ -2016,13 +2020,25 @@ function doAiApplyImport() {
 let lastAnalysis = null;
 function onJdInput() {
   const val = document.getElementById('jd-input').value;
-  document.getElementById('jd-char-count').textContent = val.length + ' chars';
-  document.getElementById('analyze-btn').disabled = val.trim().length < 100;
+  const len = val.length;
+  const countEl = document.getElementById('jd-char-count');
+  const overLimit = len > JD_MAX_CHARS;
+  countEl.textContent = overLimit
+    ? `${len.toLocaleString()} / ${JD_MAX_CHARS.toLocaleString()} chars — too long, trim ${(len-JD_MAX_CHARS).toLocaleString()}`
+    : `${len.toLocaleString()} / ${JD_MAX_CHARS.toLocaleString()} chars`;
+  countEl.style.color = overLimit ? 'var(--accent2)' : 'var(--text-dim)';
+  countEl.style.fontWeight = overLimit ? '600' : '400';
+  const jdInput = document.getElementById('jd-input');
+  jdInput.style.borderColor = overLimit ? 'var(--accent2)' : 'var(--border)';
+  document.getElementById('analyze-btn').disabled = val.trim().length < 100 || overLimit;
 }
 function clearAnalyzer() {
   document.getElementById('jd-input').value = '';
   document.getElementById('jd-url').value = '';
-  document.getElementById('jd-char-count').textContent = '0 chars';
+  document.getElementById('jd-char-count').textContent = '0 / ' + JD_MAX_CHARS.toLocaleString() + ' chars';
+  document.getElementById('jd-char-count').style.color = 'var(--text-dim)';
+  document.getElementById('jd-char-count').style.fontWeight = '400';
+  document.getElementById('jd-input').style.borderColor = 'var(--border)';
   document.getElementById('fetch-status').textContent = '';
   document.getElementById('analyze-btn').disabled = true;
   document.getElementById('analysis-result').innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;color:var(--text-dim);"><div style="font-size:32px;">🎯</div><div style="font-weight:600;color:var(--text-muted);">Paste a JD and click Analyze</div></div>';
@@ -2083,6 +2099,7 @@ async function runAnalysis() {
   if (!apiKey) { showToast('Enter your API key in Settings first', '⚠️'); toggleSettings(); return; }
   const jd = document.getElementById('jd-input').value.trim();
   if (jd.length < 100) return;
+  if (jd.length > JD_MAX_CHARS) { showToast(`Job description is too long (${jd.length.toLocaleString()} / ${JD_MAX_CHARS.toLocaleString()} chars) — trim it down and try again`, '⚠️'); return; }
   const btn = document.getElementById('analyze-btn');
   const btnText = document.getElementById('analyze-btn-text');
   btn.disabled = true;
