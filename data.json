@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-12T06:54:47.862Z",
+    "lastUpdated": "2026-08-12T06:54:54.524Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -156,7 +156,7 @@
       "numInterviews": null,
       "nextInterviewDate": null,
       "applied": null,
-      "viaEmployee": null,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
