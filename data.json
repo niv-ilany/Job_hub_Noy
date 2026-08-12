@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-12T06:17:23.538Z",
+    "lastUpdated": "2026-08-12T06:31:08.125Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -34,13 +34,13 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-11",
+      "lastUpdate": "2026-08-12",
       "company": "HoneyBook",
       "title": "Marketing Analytics Lead",
       "url": "https://www.linkedin.com/jobs/view/4417228347/",
-      "applicationMethod": "שלחתי הודעה לשקד מוסרי שעובדת שם",
+      "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 74/100) — undefined",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי הודעה לשקד מוסרי שעובדת שם",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
