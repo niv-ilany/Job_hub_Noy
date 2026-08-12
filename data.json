@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-12T06:38:39.450Z",
+    "lastUpdated": "2026-08-12T06:40:40.977Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -115,13 +115,13 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-11",
+      "lastUpdate": "2026-08-12",
       "company": "HiBob",
       "title": "Senior Business Analyst",
       "url": "https://www.linkedin.com/jobs/view/4450256393/",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 58/100) — This role is fundamentally about building and governing an organization's analytical infrastructure — semantic layers, KPI standards, scalable analytical frameworks, and AI-powered data products — not doing product or business analytics in the traditional sense. While Noy has the SQL, stakeholder, and AI-tool chops, the job is an analytics platform/enablement role at an HR-SaaS company, two degrees removed from her B2C gaming product analytics core. The explicit requirement for AI coding agents (Cursor, Codex, Claude Code) as hands-on delivery tools is a hard skills gap she can't paper over.",
-      "interviewNotes": "",
+      "interviewNotes": "הוספתי 2 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
