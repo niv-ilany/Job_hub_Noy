@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T09:45:41.208Z",
+    "lastUpdated": "2026-08-13T09:46:00.228Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -67,14 +67,14 @@
       "url": "https://www.linkedin.com/jobs/view/4448268932/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 88/100) — Exceptionally strong alignment — Appcharge is a direct-to-consumer monetization platform, which maps almost perfectly to Noy's gaming B2C monetization and funnel ownership experience. The three 'Must' requirements (4+ years BA/DA, SQL, gaming/B2C) are all cleanly met, and the role's emphasis on funnels, conversion, feature evaluation, and dashboarding mirrors exactly what she owns at SciPlay. The one honest gap is Python, which is listed as Advantage only — her ChatGPT/LLM usage partially covers the AI-tools angle.",
-      "interviewNotes": "שלחתי מייל למיכל שעבדה עם טל בסייפלי\nהוספתי את ספיר שוום",
+      "interviewNotes": "שלחתי מייל למיכל שעבדה עם טל בסייפלי, היא הגישה אותי\nהוספתי את ספיר שוום",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 88,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
