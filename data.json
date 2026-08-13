@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T08:24:17.079Z",
+    "lastUpdated": "2026-08-13T09:42:47.098Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -277,7 +277,7 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-13",
       "company": "ONE ZERO Bank",
       "title": "Senior Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4445701679/",
@@ -290,7 +290,7 @@
       "fitScore": 71,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
