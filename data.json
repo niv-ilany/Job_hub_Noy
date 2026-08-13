@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T08:03:42.421Z",
+    "lastUpdated": "2026-08-13T08:06:28.432Z",
     "jobCount": 12
   },
   "trackerJobs": [
@@ -13,7 +13,7 @@
       "url": "https://www.linkedin.com/jobs/view/4364671319/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 72/100) — Strong alignment on the analyst archetype — self-starter, full-funnel ownership, translating data to decisions, cross-functional partnership — and Noy's SQL + Tableau + A/B testing toolkit maps well. The meaningful gap is the explicit SaaS-first framing: ARR, Churn, PLG vocabulary is front and center, and Noy's entire product track record is B2C gaming, not B2B SaaS subscriptions. The role is analytically right but commercially a vocabulary stretch.",
-      "interviewNotes": "",
+      "interviewNotes": "הוספתי 3 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
