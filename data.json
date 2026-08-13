@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T09:45:29.098Z",
+    "lastUpdated": "2026-08-13T09:45:41.208Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -13,7 +13,7 @@
       "url": "https://www.linkedin.com/jobs/view/4440761289/",
       "applicationMethod": "עמית של ניצן הגיש אותי",
       "status": "🚫 Skip (Score: 28/100) — This is a Product Management role, not a Product Analytics role — Noy would be defining roadmaps, writing PRDs, managing engineering teams, and navigating partner relationships with Apple/Google/Meta, none of which align with her analytics-first career track. The role explicitly requires 5+ years of PM ownership in B2B SaaS, deep big-data architecture fluency, and API/pipeline technical depth that Noy doesn't have. Even setting aside title mismatch, the domain (mobile attribution, privacy regulation, AdTech infrastructure) and stakeholder profile (senior R&D engineers, C-suite, strategic platform partners) are far outside her center of gravity.",
-      "interviewNotes": "",
+      "interviewNotes": "עמית של ניצן הגיש אותי",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
