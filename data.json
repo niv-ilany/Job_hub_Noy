@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T09:46:29.867Z",
+    "lastUpdated": "2026-08-13T09:48:29.996Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -115,13 +115,13 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-13",
       "company": "Guesty",
       "title": "Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4434108626/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 68/100) — Noy clears the technical bar comfortably — SQL, BI dashboarding, KPI ownership, cross-functional stakeholder work, and translating data to decisions are all genuine strengths. However, this role is explicitly a Marketing Analytics seat inside a B2B SaaS hospitality platform, which creates two meaningful gaps: Noy's analytics DNA is product/economy/funnel in B2C gaming, not paid-channel marketing (ROAS, CAC, attribution, Google/Facebook Ads), and Guesty's business model is SaaS-subscription-centric — vocabulary and mental models she hasn't worked in. It's a stretch, not a skip, but she'd be entering unfamiliar territory on the domain side.",
-      "interviewNotes": "אשתו של עומרי קרט\nהוספתי 2 אנשים",
+      "interviewNotes": "אשתו של עומרי קרט, לא אישרה אותי, שלחתי הודעה לענבל\nהוספתי 2 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
@@ -129,7 +129,7 @@
       "numInterviews": null,
       "nextInterviewDate": null,
       "applied": null,
-      "viaEmployee": null,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
