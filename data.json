@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T09:43:03.351Z",
+    "lastUpdated": "2026-08-13T09:43:20.810Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -169,7 +169,7 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-13",
       "company": "HiBob",
       "title": "Senior Business Analyst",
       "url": "https://www.linkedin.com/jobs/view/4450256393/",
@@ -182,7 +182,7 @@
       "fitScore": 58,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
