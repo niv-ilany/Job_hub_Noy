@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T06:25:32.022Z",
+    "lastUpdated": "2026-08-13T06:53:23.393Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -229,14 +229,14 @@
       "url": "https://www.linkedin.com/jobs/view/4445701679/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 71/100) — Solid cross-functional analytics fit with strong SQL, stakeholder management, and KPI/funnel ownership — all genuinely present in Noy's background. However, two meaningful concerns: the role explicitly asks for semantic layer and data modeling ownership (views, aggregation layers, star/snowflake schemas in the DWH) which skews toward data engineering lite, and fintech/banking is a domain step sideways from her B2C gaming trajectory rather than forward. Not a disqualifier, but not a natural-fit slam dunk either.",
-      "interviewNotes": "שלחתי הודעה ליצחק הוא בחופש אז שלחתי הודעה גם לבר\nהוספתי 4 אנשים",
+      "interviewNotes": "שלחתי הודעה ליצחק הוא בחופש אז שלחתי הודעה גם לבר - הוא מגיש אותי\nהוספתי 4 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 71,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
