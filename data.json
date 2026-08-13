@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T09:43:58.178Z",
+    "lastUpdated": "2026-08-13T09:44:39.426Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -175,7 +175,7 @@
       "url": "https://www.linkedin.com/jobs/view/4450256393/",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 58/100) — This role is fundamentally about building and governing an organization's analytical infrastructure — semantic layers, KPI standards, scalable analytical frameworks, and AI-powered data products — not doing product or business analytics in the traditional sense. While Noy has the SQL, stakeholder, and AI-tool chops, the job is an analytics platform/enablement role at an HR-SaaS company, two degrees removed from her B2C gaming product analytics core. The explicit requirement for AI coding agents (Cursor, Codex, Claude Code) as hands-on delivery tools is a hard skills gap she can't paper over.",
-      "interviewNotes": "אופיר קדם אישר אותי, שלחתי לו הודעה\nהוספתי 2 אנשים",
+      "interviewNotes": "אופיר קדם אישר אותי, שלחתי לו הודעה הוא אישר אותי\nהוספתי 2 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
