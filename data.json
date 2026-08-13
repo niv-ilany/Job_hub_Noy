@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-12T11:30:02.187Z",
+    "lastUpdated": "2026-08-13T06:23:58.216Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -250,20 +250,20 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-13",
       "company": "SolarEdge Technologies",
       "title": "Sales Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4431482435/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 58/100) — This is a sales-reporting and data-support role in a B2B hardware/energy company — not product analytics, not gaming, not B2C. Noy is technically overqualified on the analytics side but the scope is narrower and more administrative than her current work. The role leans heavily on sales funnel reporting and IS automation support for a sales team, which is a lateral-to-downward move from Senior Product Analyst owning full user flows and A/B-tested economy decisions.",
-      "interviewNotes": "שלחתי הודעה לעדן כהן שעבדה איתי בפרודוור",
+      "interviewNotes": "שלחתי הודעה לעדן כהן שעבדה איתי בפרודוור - היא אמרה שמגישה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 58,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
