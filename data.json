@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-13T09:43:20.810Z",
+    "lastUpdated": "2026-08-13T09:43:29.263Z",
     "jobCount": 13
   },
   "trackerJobs": [
@@ -250,7 +250,7 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-13",
       "company": "Helfy (DoktorABC)",
       "title": "Product Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4413457838/",
@@ -263,10 +263,10 @@
       "fitScore": 84,
       "numInterviews": null,
       "nextInterviewDate": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
       "interviewed": null,
       "choseNotToApply": null,
