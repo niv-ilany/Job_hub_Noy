@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:28:26.107Z",
+    "lastUpdated": "2026-08-16T07:29:43.452Z",
     "jobCount": 12
   },
   "trackerJobs": [
@@ -13,7 +13,7 @@
       "url": "https://www.linkedin.com/jobs/view/4445007653/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 72/100) — Noy hits the core product analytics profile well — A/B testing ownership, cross-functional stakeholder work, funnel/behavioral analysis, and AI-tool integration are all genuine strengths. However, Python is listed as a hard 'Must' requirement alongside SQL, and Noy has no demonstrated Python background, which is a real blocker that could kill her application at the screening stage. The ML model evaluation angle is also a stretch, though the rest of the role fits her well.",
-      "interviewNotes": "",
+      "interviewNotes": "הוספתי 3 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
@@ -21,7 +21,7 @@
       "numInterviews": null,
       "nextInterviewDate": null,
       "applied": null,
-      "viaEmployee": null,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
