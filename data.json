@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T08:39:23.512Z",
-    "jobCount": 14
+    "lastUpdated": "2026-08-16T08:47:28.586Z",
+    "jobCount": 15
   },
   "trackerJobs": [
+    {
+      "month": "2026-08",
+      "lastUpdate": "2026-08-16",
+      "company": "Glow",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4443708848/",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — This role explicitly states it is 'not a traditional BI or Product Analytics role' — which is precisely Noy's core strength. The primary stakeholders are Engineering and Data Science, the work involves modifying production system components and designing data infrastructure, and the domain is enterprise cybersecurity with no B2C/gaming/consumer context. Python is listed as a required skill alongside data modeling and schema design as primary job functions, not analytics outputs.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1786870044869"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
