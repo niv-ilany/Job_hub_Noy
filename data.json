@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:29:43.452Z",
-    "jobCount": 12
+    "lastUpdated": "2026-08-16T07:34:08.532Z",
+    "jobCount": 13
   },
   "trackerJobs": [
+    {
+      "month": "2026-08",
+      "lastUpdate": "2026-08-16",
+      "company": "Aidoc",
+      "title": "Senior Product Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4454025962/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 74/100) — Aidoc is a strong structural match on the analyst role itself — platform usage analysis, dashboard development, feature KPI tracking, and cross-functional collaboration are all in Noy's wheelhouse. The critical gap is industry: healthcare AI/medtech is about as far from gaming/B2C as you can get, and the user base (clinicians, hospital ops, Customer Success managers) is B2B enterprise, not consumer. There's no A/B testing, economy/monetization, or funnel ownership mentioned, which are Noy's sharpest differentiators.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 74,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1786865644575"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
