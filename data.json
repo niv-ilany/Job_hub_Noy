@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:23:29.988Z",
-    "jobCount": 11
+    "lastUpdated": "2026-08-16T07:28:26.107Z",
+    "jobCount": 12
   },
   "trackerJobs": [
+    {
+      "month": "2026-08",
+      "lastUpdate": "2026-08-16",
+      "company": "Gett",
+      "title": "Experienced Product Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4445007653/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 72/100) — Noy hits the core product analytics profile well — A/B testing ownership, cross-functional stakeholder work, funnel/behavioral analysis, and AI-tool integration are all genuine strengths. However, Python is listed as a hard 'Must' requirement alongside SQL, and Noy has no demonstrated Python background, which is a real blocker that could kill her application at the screening stage. The ML model evaluation angle is also a stretch, though the rest of the role fits her well.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 72,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1786865302433"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
