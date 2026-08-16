@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:12:14.153Z",
+    "lastUpdated": "2026-08-16T07:13:49.354Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -88,13 +88,13 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-16",
       "company": "Mize",
       "title": "Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4422568269/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 72/100) — Mize hits several of Noy's core competencies — SQL, BI dashboarding, cross-functional analytics, and data quality/QA — but the fintech-travel B2B context is a meaningful step away from her B2C gaming expertise, and the role reads more operational/generalist than the product-analytics ownership she's built at SciPlay and Playtika. The 'Data Analyst' (not Senior) title is also a lateral-to-downward move for someone at Senior level, and the lack of A/B testing, economy/monetization, or funnel ownership signals this role won't stretch her in the right direction.",
-      "interviewNotes": "שלחתי בקשת חברות לנדב שעבד בסייפלי",
+      "interviewNotes": "הוספתי עוד 3 אנשים\nשלחתי בקשת חברות לנדב שעבד בסייפלי",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
@@ -102,7 +102,7 @@
       "numInterviews": null,
       "nextInterviewDate": null,
       "applied": null,
-      "viaEmployee": null,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
