@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T08:48:54.611Z",
-    "jobCount": 15
+    "lastUpdated": "2026-08-16T08:52:20.510Z",
+    "jobCount": 16
   },
   "trackerJobs": [
+    {
+      "month": "2026-08",
+      "lastUpdate": "2026-08-16",
+      "company": "Cognyte",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4453110969/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 58/100) — Noy has the SQL, BI dashboarding, and root-cause-analysis instincts this role demands, and her early Credit Risk and Financial Analyst background gives her a credible finance vocabulary. However, the role is explicitly financial/banking/fintech dataset-focused, not gaming or B2C product analytics, and Python (Pandas) is listed as a hard requirement she lacks. The location (Bar Lev) and the investigative security/law-enforcement domain are also meaningful context shifts from her current trajectory.",
+      "interviewNotes": "שאלתי את ליאור",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 58,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1786870336055"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
