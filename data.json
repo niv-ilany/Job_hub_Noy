@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:39:49.476Z",
-    "jobCount": 13
+    "lastUpdated": "2026-08-16T07:45:43.557Z",
+    "jobCount": 14
   },
   "trackerJobs": [
+    {
+      "month": "2026-08",
+      "lastUpdate": "2026-08-16",
+      "company": "Palo Alto Networks",
+      "title": "Principal Product Analyst (Cortex)",
+      "url": "https://www.linkedin.com/jobs/view/4445856088/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 71/100) — Noy checks the core analytics boxes — SQL, BI dashboarding, cross-functional ownership, AI-tool integration, and 7+ years experience — and the role genuinely values what she's best at: translating complex data into product strategy. The critical gap is that this is a B2B enterprise SaaS cybersecurity product, which is almost the polar opposite of Noy's B2C gaming/consumer domain; the KPI vocabulary (adoption, engagement, customer outcomes in an enterprise context) differs meaningfully from monetization, retention, and ARPI in gaming. It's a stretch, not a hard no, but she'd be competing against candidates with direct B2B SaaS or cybersecurity product analytics experience.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 71,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1786866339198"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
