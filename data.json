@@ -1,19 +1,19 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:08:57.237Z",
+    "lastUpdated": "2026-08-16T07:11:22.737Z",
     "jobCount": 11
   },
   "trackerJobs": [
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-13",
+      "lastUpdate": "2026-08-16",
       "company": "Rounds",
       "title": "Senior Business Analyst",
       "url": "https://www.linkedin.com/jobs/view/4426784889/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Solid match on the core analytics stack — SQL, Tableau/Looker, dashboarding, cohort/funnel analysis, and cross-functional stakeholder work with Marketing and Finance all align well with Noy's background. The UA/ROAS/growth marketing metrics angle is a partial vocabulary gap (her monetization expertise is more product-side than paid acquisition), and the risk model + financial reporting collaboration leans slightly toward her earlier finance career in a way that could either be a strength or signal a step sideways. Not a gaming role, but digital/mobile environment requirement maps cleanly.",
-      "interviewNotes": "",
+      "interviewNotes": "הוספתי 3 אנשים",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
@@ -21,7 +21,7 @@
       "numInterviews": null,
       "nextInterviewDate": null,
       "applied": null,
-      "viaEmployee": null,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
