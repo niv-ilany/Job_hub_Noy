@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T07:16:03.961Z",
+    "lastUpdated": "2026-08-16T07:18:09.268Z",
     "jobCount": 11
   },
   "trackerJobs": [
@@ -142,13 +142,13 @@
     },
     {
       "month": "2026-08",
-      "lastUpdate": "2026-08-12",
+      "lastUpdate": "2026-08-16",
       "company": "Mami",
       "title": "Product Analyst",
       "url": "https://www.linkedin.com/jobs/view/4430388036/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 79/100) — Strong alignment on the core product analytics mandate — B2C, funnel/retention ownership, KPI tracking, cross-functional partnership, and AI tool integration all map cleanly to Noy's profile. The main caution is the explicit requirement to 'own and develop analytics infrastructure' in BigQuery/Looker/Data Studio, which edges toward data engineering territory Noy lacks, and the subscription-conversion focus introduces some SaaS-adjacent vocabulary she hasn't owned directly. The role is likely a slight step down in seniority given the 'Senior' title Noy currently holds and the small-company stage, but the strategic scope and leadership proximity partially offset that.",
-      "interviewNotes": "שלחתי הודעה לברק אלון",
+      "interviewNotes": "הוספתי עוד 3 אנשים\nשלחתי הודעה לברק אלון",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
