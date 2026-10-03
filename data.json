@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-10-03T13:12:18.813Z",
-    "jobCount": 16
+    "lastUpdated": "2026-10-03T13:15:52.745Z",
+    "jobCount": 17
   },
   "trackerJobs": [
+    {
+      "month": "2026-10",
+      "lastUpdate": "2026-10-03",
+      "company": "Flare",
+      "title": "Senior Product Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4432756905",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 81/100) — Strong alignment on the core analytics stack and working style — SQL, Tableau, A/B testing, end-to-end metric ownership, and AI-integrated workflows all match Noy's profile closely. The role is legal-tech B2C (consumer-facing), which is adjacent to gaming but not a natural fit; the experimentation and funnel ownership angle is very familiar territory. The primary gap is that stakeholders include Engineering as a top partner, and a 'nice to have' around data infrastructure contribution signals some engineering-adjacent expectations that Noy should be honest about.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 81,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1791033351233"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
