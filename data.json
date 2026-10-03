@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Noy Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-16T16:52:15.841Z",
-    "jobCount": 16
+    "lastUpdated": "2026-10-03T13:12:05.425Z",
+    "jobCount": 17
   },
   "trackerJobs": [
+    {
+      "month": "2026-10",
+      "lastUpdate": "2026-10-03",
+      "company": "asdfdf",
+      "title": "sdfsdf",
+      "url": "",
+      "applicationMethod": "",
+      "status": "",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": null,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1791033123915"
+    },
     {
       "month": "2026-08",
       "lastUpdate": "2026-08-16",
@@ -439,8 +466,5 @@
     }
   ],
   "finderJobs": [],
-  "finderFeedback": {},
-  "settings": {
-    "threshold": "80"
-  }
+  "finderFeedback": {}
 }
