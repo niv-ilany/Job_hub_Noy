@@ -533,7 +533,6 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
       <span id="tg-sync-status" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-muted);display:none;"></span>
       <input type="file" id="import-file" accept=".json" style="display:none" onchange="importBackup(event)">
       <button class="t-btn t-btn-primary" onclick="openAddModal()">+ Add Job</button>
-      <button class="t-btn" onclick="openAiApplyImport()" style="background:#f0f4ff;border:1.5px solid #c0caff;color:#3a57e8;font-weight:600;">📥 AIApply</button>
     </div>
   </div>
   <div class="tracker-tabs-bar">
@@ -1900,119 +1899,6 @@ function checkHashSettings() {
     console.warn('Failed to parse hash settings:', e);
   }
 }
-const AIAPPLY_USER_ID = '115555783026739498037';
-const AIAPPLY_BASE    = 'https://aiapply.co/app/auto-apply/proxy/v1/users/' + AIAPPLY_USER_ID;
-let aiApplyPreviewJobs = [];
-function openAiApplyImport() {
-  document.getElementById('aiapply-modal').classList.remove('hidden');
-  document.getElementById('aiapply-status').textContent = '';
-  document.getElementById('aiapply-preview').style.display = 'none';
-  document.getElementById('aiapply-import-btn').style.display = 'none';
-  document.getElementById('aiapply-fetch-btn').style.display = '';
-  aiApplyPreviewJobs = [];
-}
-function closeAiApplyModal() {
-  document.getElementById('aiapply-modal').classList.add('hidden');
-}
-async function fetchAiApplyJobs() {
-  const token = document.getElementById('aiapply-token').value.trim();
-  if (!token) { document.getElementById('aiapply-status').textContent = '⚠️ Paste your access_token first'; return; }
-  const btn = document.getElementById('aiapply-fetch-btn');
-  btn.disabled = true;
-  btn.textContent = '⏳ Fetching...';
-  document.getElementById('aiapply-status').textContent = 'Fetching jobs from AIApply...';
-  document.getElementById('aiapply-status').style.color = 'var(--text-muted)';
-  try {
-    let allJobs = [];
-    let offset = 0;
-    const limit = 50;
-    let total = Infinity;
-    while (offset < total) {
-      const apiUrl = AIAPPLY_BASE + '/queue/jobs?limit=' + limit + '&offset=' + offset + '&search=&status=&order=desc&sort_by=created_at';
-      const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(apiUrl) + '&headers=' + encodeURIComponent(JSON.stringify({'Authorization':'Bearer '+token,'Accept':'application/json'}));
-      const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(15000) });
-      if (!res.ok) throw new Error('Proxy error ' + res.status);
-      const wrapper = await res.json();
-      if (!wrapper.contents) throw new Error('No data returned — token may be expired');
-      let data;
-      try { data = JSON.parse(wrapper.contents); }
-      catch(e) { throw new Error('Could not parse response — token may be expired or invalid'); }
-      if (data.detail || data.error) throw new Error(data.detail || data.error);
-      total = data.total || 0;
-      allJobs = allJobs.concat(data.jobs || []);
-      offset += limit;
-      document.getElementById('aiapply-status').textContent = 'Fetched ' + allJobs.length + ' / ' + total + ' jobs...';
-      if ((data.jobs||[]).length < limit) break;
-    }
-    const existingUrls = new Set(jobs.map(j => (j.url||'').toLowerCase().trim()));
-    const existingKeys = new Set(jobs.map(j => ((j.company||'')+(j.title||'')).toLowerCase().replace(/\s/g,'')));
-    aiApplyPreviewJobs = allJobs.map(j => {
-      const month = (j.created_at||'').slice(0,7);
-      const fitScore = j.fit_score ? Math.round(j.fit_score * 100) : null;
-      const notes = [
-        j.job_matching_reasons ? 'Match: ' + j.job_matching_reasons.slice(0,120) : null,
-        j.key_matches?.length ? 'Strengths: ' + j.key_matches.join(', ') : null,
-        j.key_gaps?.length ? 'Gaps: ' + j.key_gaps.join(', ') : null,
-      ].filter(Boolean).join(' | ');
-      const url = (j.job_link||'').toLowerCase().trim();
-      const key = ((j.company_name||'')+(j.job_title||'')).toLowerCase().replace(/\s/g,'');
-      const isDuplicate = existingUrls.has(url) || existingKeys.has(key);
-      return {
-        _duplicate: isDuplicate,
-        id: 'aiapply-' + j.id,
-        month,
-        company: j.company_name || '',
-        title: j.job_title || '',
-        url: j.job_link || '',
-        lastUpdate: (j.created_at||'').slice(0,10),
-        status: j.auto_apply_status || '',
-        interviewNotes: notes,
-        fitScore,
-        applicationMethod: 'AIApply',
-        viaLinkedin: (j.job_link||'').includes('linkedin.com') || null,
-      };
-    });
-    const newJobs   = aiApplyPreviewJobs.filter(j => !j._duplicate);
-    const dupeJobs  = aiApplyPreviewJobs.filter(j => j._duplicate);
-    const previewEl = document.getElementById('aiapply-preview');
-    previewEl.style.display = '';
-    previewEl.innerHTML = '<div style="font-weight:600;margin-bottom:8px;color:var(--text);">' +
-      newJobs.length + ' new jobs to import &nbsp;·&nbsp; <span style="color:var(--text-dim)">' + dupeJobs.length + ' already in tracker (skipped)</span></div>' +
-      newJobs.slice(0,10).map(j =>
-        '<div style="padding:4px 0;border-bottom:1px solid var(--border-light);font-size:12px;">' +
-        '<strong>' + esc(j.company) + '</strong> — ' + esc(j.title) +
-        (j.fitScore ? ' <span style="color:var(--accent3);font-weight:700">' + j.fitScore + '</span>' : '') +
-        ' <span style="color:var(--text-dim)">' + (j.month||'') + '</span></div>'
-      ).join('') +
-      (newJobs.length > 10 ? '<div style="color:var(--text-dim);margin-top:6px;">...and ' + (newJobs.length-10) + ' more</div>' : '');
-    document.getElementById('aiapply-status').textContent = '✓ Ready to import ' + newJobs.length + ' new jobs';
-    document.getElementById('aiapply-status').style.color = '#1a7a4a';
-    if (newJobs.length > 0) {
-      document.getElementById('aiapply-import-btn').style.display = '';
-    }
-  } catch(e) {
-    document.getElementById('aiapply-status').textContent = '⚠️ ' + e.message;
-    document.getElementById('aiapply-status').style.color = 'var(--accent2)';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '🔍 Preview Import';
-  }
-}
-function doAiApplyImport() {
-  const toImport = aiApplyPreviewJobs.filter(j => !j._duplicate).map(j => {
-    const { _duplicate, ...clean } = j;
-    return clean;
-  });
-  if (toImport.length === 0) return;
-  jobs = [...toImport, ...jobs];
-  saveJobs();
-  scheduleGhSync();
-  populateMonthFilter();
-  renderTracker();
-  updateNavStats();
-  closeAiApplyModal();
-  showToast('Imported ' + toImport.length + ' jobs from AIApply ✓', '📥');
-}
 let lastAnalysis = null;
 function onJdInput() {
   const val = document.getElementById('jd-input').value;
@@ -2170,7 +2056,7 @@ Return ONLY valid JSON, no markdown:
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 1000,
+        max_tokens: 3000,
         system: systemPrompt,
         messages: [{ role: 'user', content: 'Analyze my fit for this job:\n\n' + jd }]
       })
@@ -2184,14 +2070,27 @@ Return ONLY valid JSON, no markdown:
     }
     const data = await response.json();
     let text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    if (data.stop_reason === 'max_tokens') {
+      log('Response was cut off (max_tokens). Length: ' + text.length, 'warn');
+    }
     text = text.replace(/```json|```/g, '').trim();
     let result;
     try { result = JSON.parse(text); }
     catch(e) {
-      const m = text.match(/\{[\s\S]*\}/);
-      if (m) result = JSON.parse(m[0]);
-      else throw new Error('Could not parse analysis response');
+      const start = text.indexOf('{'), end = text.lastIndexOf('}');
+      try {
+        if (start === -1 || end <= start) throw new Error('no JSON object found');
+        result = JSON.parse(text.slice(start, end + 1));
+      } catch(e2) {
+        log('Raw response (first 500 chars): ' + text.slice(0, 500), 'warn');
+        throw new Error(data.stop_reason === 'max_tokens'
+          ? 'Response was cut off before finishing — try a shorter job description'
+          : 'Could not parse analysis response (' + e2.message + ')');
+      }
     }
+    ['greenFlags','redFlags','objections','emphasize'].forEach(k => { if (!Array.isArray(result[k])) result[k] = []; });
+    if (typeof result.verdict !== 'string') result.verdict = '⚠️ Apply with caution';
+    if (typeof result.score !== 'number') result.score = parseInt(result.score) || 0;
     lastAnalysis = result;
     log('Analysis complete — score: ' + result.score + '/100', 'success');
     renderAnalysisResult(result);
@@ -2322,24 +2221,5 @@ async function initApp() {
 }
 document.addEventListener('DOMContentLoaded', initApp);
 </script>
-<div class="modal-overlay hidden" id="aiapply-modal" onclick="if(event.target===this)closeAiApplyModal()">
-  <div class="modal" style="max-width:560px;">
-    <div class="modal-title">📥 Import from AIApply</div>
-    <div style="font-size:13px;color:var(--text-muted);margin-bottom:16px;line-height:1.6;">
-      Paste your AIApply <strong>access_token</strong> from the Cookie header (F12 → Network → jobs request → Request Headers → Cookie → copy the <code>access_token=eyJ...</code> value only).
-    </div>
-    <div class="form-group full">
-      <label class="form-label">Access Token</label>
-      <textarea class="form-textarea" id="aiapply-token" placeholder="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..." style="height:80px;font-family:'JetBrains Mono',monospace;font-size:11px;"></textarea>
-    </div>
-    <div id="aiapply-status" style="font-size:12px;font-family:'JetBrains Mono',monospace;min-height:18px;margin-bottom:12px;color:var(--text-muted);"></div>
-    <div id="aiapply-preview" style="display:none;background:var(--surface2);border-radius:8px;padding:12px;margin-bottom:14px;font-size:12px;max-height:200px;overflow-y:auto;"></div>
-    <div class="modal-actions">
-      <button class="t-btn t-btn-ghost" onclick="closeAiApplyModal()">Cancel</button>
-      <button class="t-btn t-btn-primary" id="aiapply-fetch-btn" onclick="fetchAiApplyJobs()">🔍 Preview Import</button>
-      <button class="t-btn t-btn-primary" id="aiapply-import-btn" onclick="doAiApplyImport()" style="display:none;background:#1a7a4a;">✅ Import Jobs</button>
-    </div>
-  </div>
-</div>
 </body>
 </html>
